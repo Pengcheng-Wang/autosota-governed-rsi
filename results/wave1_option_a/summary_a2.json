@@ -1,0 +1,182 @@
+{
+  "benchmark": "A2_TropicalAttention_StrictlyUnseenOOD_v3",
+  "best_candidate": "a2_cand_04_tri3step_scalenorm",
+  "confirm_verdicts": {
+    "tropical": {
+      "candidate_f1": 0.7551344552406869,
+      "comparator_f1": 0.6600988478846018,
+      "signed_gain": 0.09503560735608507,
+      "lcb": 0.08291710637402021,
+      "ci95": [
+        0.0848185605724765,
+        0.10572626161564735
+      ],
+      "se": 0.005406659338358106,
+      "decision": "PROMOTE"
+    },
+    "adaptive_softmax": {
+      "candidate_f1": 0.7551344552406869,
+      "comparator_f1": 0.6803580476914887,
+      "signed_gain": 0.07477640754919823,
+      "lcb": 0.06137293204204157,
+      "ci95": [
+        0.06334331468748544,
+        0.08674703656926086
+      ],
+      "se": 0.005979949675663183,
+      "decision": "PROMOTE"
+    },
+    "tropical_equal_runtime": {
+      "candidate_f1": 0.7551344552406869,
+      "comparator_f1": 0.6876953816773353,
+      "signed_gain": 0.06743907356335155,
+      "lcb": 0.06072564782455414,
+      "ci95": [
+        0.061434698345734784,
+        0.07251184506485775
+      ],
+      "se": 0.002843210955362433,
+      "decision": "PROMOTE"
+    }
+  },
+  "holdout_reserve": {
+    "status": "RESERVED",
+    "seal_file": "/scratch/autosota_governed_v2/tracks/bench_a2_tropical/HOLDOUT_SEAL.json",
+    "schema_version": "3.0",
+    "reserved_at_utc": "2026-11-17T23:05:28.980385+00:00",
+    "candidate_id": "a2_cand_04_tri3step_scalenorm",
+    "candidate_artifact_sha256": "4dd6d3d4bb5d148e19259dea52227430557245cf46d3635954926c21b07650d0",
+    "manifest_root_sha256": "fe0180f952b662938b9ce6f5f3fabf40a477602b8d1d43b129d1d1e2301b3967",
+    "rules_sha256": "a1723c5e961406db5238a9c430d76d43341b908e9ec34580f16a456ba779cf56",
+    "ledger_head_at_reserve_sha256": "04deb09af8d9ca77e1dc0a53d0ca57aa19b7bb3643e2eb1f545cb7baeb3a7e94",
+    "required_comparators_verified": [
+      "tropical",
+      "adaptive_softmax",
+      "tropical_equal_runtime"
+    ]
+  },
+  "holdout_finalized": {
+    "status": "FINALIZED",
+    "seal_file": "/scratch/autosota_governed_v2/tracks/bench_a2_tropical/HOLDOUT_SEAL.json",
+    "holdout_seal_sha256": "1923f0a873368ea4bbba316eed36184dac66a3a6f0f7c4aca4682ea69e1d401b",
+    "ledger_entry_sha256": "39fb307afc31655e0d4c1b6892e85b3a5f0bfca739544f3aec1c29236d21d247",
+    "comparisons": {
+      "tropical": {
+        "n_items": 540,
+        "n_clusters": 12,
+        "n_seeds": 5,
+        "n_strata": 9,
+        "bootstrap_mode": "crossed_seed_cluster",
+        "weighting": "equal_stratum",
+        "statistic": "macro_f1_from_counts",
+        "obs_candidate": 0.6681898644979091,
+        "obs_reference": 0.6029639559636375,
+        "signed_gain": 0.06522590853427157,
+        "se": 0.00454195291552695,
+        "lcb_one_sided": 0.056635772725386446,
+        "ci95_low": 0.056635772725386446,
+        "ci95_high": 0.07436810623205803,
+        "distinct_cluster_deltas": 12,
+        "n_positive_clusters": 12,
+        "insufficient_replication": false,
+        "low_cluster_warning": false
+      },
+      "adaptive_softmax": {
+        "n_items": 540,
+        "n_clusters": 12,
+        "n_seeds": 5,
+        "n_strata": 9,
+        "bootstrap_mode": "crossed_seed_cluster",
+        "weighting": "equal_stratum",
+        "statistic": "macro_f1_from_counts",
+        "obs_candidate": 0.6681898644979091,
+        "obs_reference": 0.60667705934707,
+        "signed_gain": 0.06151280515083912,
+        "se": 0.008083995166637853,
+        "lcb_one_sided": 0.04677290112573551,
+        "ci95_low": 0.04677290112573551,
+        "ci95_high": 0.07925706968008916,
+        "distinct_cluster_deltas": 12,
+        "n_positive_clusters": 12,
+        "insufficient_replication": false,
+        "low_cluster_warning": false
+      },
+      "tropical_equal_runtime": {
+        "n_items": 540,
+        "n_clusters": 12,
+        "n_seeds": 5,
+        "n_strata": 9,
+        "bootstrap_mode": "crossed_seed_cluster",
+        "weighting": "equal_stratum",
+        "statistic": "macro_f1_from_counts",
+        "obs_candidate": 0.6681898644979091,
+        "obs_reference": 0.6285170241623659,
+        "signed_gain": 0.03967284033554319,
+        "se": 0.0076892307899748755,
+        "lcb_one_sided": 0.025004829535803852,
+        "ci95_low": 0.025004829535803852,
+        "ci95_high": 0.055212627203870546,
+        "distinct_cluster_deltas": 12,
+        "n_positive_clusters": 12,
+        "insufficient_replication": false,
+        "low_cluster_warning": false
+      }
+    }
+  },
+  "holdout_per_stratum_f1": {
+    "candidate": {
+      "Knapsack_len_3x": 0.7403658707755649,
+      "Knapsack_noisy_len2p5x": 0.773198980180134,
+      "Knapsack_scale_3x": 0.8763806156958508,
+      "MinCoinChange_len_3x": 0.41638762774523774,
+      "MinCoinChange_noisy_len2p5x": 0.46530637797423413,
+      "MinCoinChange_scale_3x": 0.3628405252533328,
+      "Quickselect_len_3x": 0.7636922109489316,
+      "Quickselect_noisy_len2p5x": 0.7139266610813946,
+      "Quickselect_scale_3x": 0.9016099108265007
+    },
+    "tropical": {
+      "Knapsack_len_3x": 0.7033372736672993,
+      "Knapsack_noisy_len2p5x": 0.742288984702254,
+      "Knapsack_scale_3x": 0.878570176975644,
+      "MinCoinChange_len_3x": 0.4617149875561589,
+      "MinCoinChange_noisy_len2p5x": 0.4941535768312291,
+      "MinCoinChange_scale_3x": 0.42888630486471474,
+      "Quickselect_len_3x": 0.6152451329245348,
+      "Quickselect_noisy_len2p5x": 0.5248656497834262,
+      "Quickselect_scale_3x": 0.5776135163674763
+    },
+    "adaptive_softmax": {
+      "Knapsack_len_3x": 0.6796864379899407,
+      "Knapsack_noisy_len2p5x": 0.7148201557901207,
+      "Knapsack_scale_3x": 0.8290898629348786,
+      "MinCoinChange_len_3x": 0.40254035024911244,
+      "MinCoinChange_noisy_len2p5x": 0.45970111066946273,
+      "MinCoinChange_scale_3x": 0.4190413498016526,
+      "Quickselect_len_3x": 0.6200119240969553,
+      "Quickselect_noisy_len2p5x": 0.5438589597495644,
+      "Quickselect_scale_3x": 0.791343382841942
+    },
+    "tropical_equal_runtime": {
+      "Knapsack_len_3x": 0.7333187475064671,
+      "Knapsack_noisy_len2p5x": 0.7842208380852121,
+      "Knapsack_scale_3x": 0.9050706013339854,
+      "MinCoinChange_len_3x": 0.4526194821875211,
+      "MinCoinChange_noisy_len2p5x": 0.505231449584208,
+      "MinCoinChange_scale_3x": 0.46051678338565566,
+      "Quickselect_len_3x": 0.6390123952426356,
+      "Quickselect_noisy_len2p5x": 0.5569630181575748,
+      "Quickselect_scale_3x": 0.619699901978033
+    }
+  },
+  "holdout_wall_clock_sec": {
+    "candidate": 56.393350553000346,
+    "tropical": 37.241041518049315,
+    "tropical_equal_runtime": 48.0452767200768
+  },
+  "ledger_verification": {
+    "status": "VERIFIED",
+    "entries": 8,
+    "head_sha256": "39fb307afc31655e0d4c1b6892e85b3a5f0bfca739544f3aec1c29236d21d247"
+  }
+}

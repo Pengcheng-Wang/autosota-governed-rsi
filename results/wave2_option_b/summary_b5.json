@@ -1,0 +1,95 @@
+{
+  "benchmark": "B5_Paper69_TreeHFD_FunctionalDecomposition_v33",
+  "best_candidate": "b5_cand_04_bagged_depth3_l2_hfd",
+  "confirm_verdicts": {
+    "treehfd_paper_depth6": {
+      "cand": 0.07942160601055086,
+      "ref": 11.112361433135234,
+      "gain": 11.032939827124684,
+      "lcb": 2.1723790723474083,
+      "decision": "PROMOTE"
+    },
+    "treehfd_depth3_reg": {
+      "cand": 0.07942160601055086,
+      "ref": 0.0856664173056505,
+      "gain": 0.006244811295099642,
+      "lcb": 0.0009154854344724517,
+      "decision": "PROMOTE"
+    }
+  },
+  "holdout_reserve": {
+    "status": "RESERVED",
+    "seal_file": "/scratch/autosota_governed_v2/tracks/bench_b5_treehfd/HOLDOUT_SEAL.json",
+    "schema_version": "3.0",
+    "reserved_at_utc": "2026-11-18T00:32:26.522789+00:00",
+    "candidate_id": "b5_cand_04_bagged_depth3_l2_hfd",
+    "candidate_artifact_sha256": "60d32495baf1d4abb52415b2a34ccb350893e5b80c33ea679d226db78493332b",
+    "manifest_root_sha256": "292fb454cb47abc1f7314e7a62f10f4887f18b8043d4a52fc63d10120c7f6ee4",
+    "rules_sha256": "b8c145f23ad4a78c9383b365d7d3e32f14f844d681b27c0e655dca9c3608ef77",
+    "ledger_head_at_reserve_sha256": "2a8130eea0f3e27e8b1294f3fdd24178a02b670df315aa26eef6b8ead68581d2",
+    "required_comparators_verified": [
+      "treehfd_paper_depth6",
+      "treehfd_depth3_reg"
+    ]
+  },
+  "holdout_pred_r2": {
+    "treehfd_paper_depth6": 0.42885673204352615,
+    "treehfd_depth3_reg": 0.9301549299649275,
+    "b5_cand_04_bagged_depth3_l2_hfd": 0.9338276872029511
+  },
+  "holdout_finalized": {
+    "status": "FINALIZED",
+    "seal_file": "/scratch/autosota_governed_v2/tracks/bench_b5_treehfd/HOLDOUT_SEAL.json",
+    "holdout_seal_sha256": "537eae9f02a0a7d83adc5a5808cfcff9a38a58626ab223c290cb7f76e84e880b",
+    "ledger_entry_sha256": "aa315ed87215e36f0f2e4276bcde996d97fe6af50f1305b4d9526c623b78d907",
+    "comparisons": {
+      "treehfd_paper_depth6": {
+        "n_items": 192,
+        "n_clusters": 8,
+        "n_seeds": 6,
+        "n_strata": 4,
+        "bootstrap_mode": "crossed_seed_cluster",
+        "weighting": "equal_stratum",
+        "statistic": "mean",
+        "obs_candidate": 0.10115892976127731,
+        "obs_reference": 1.6275383955944855,
+        "signed_gain": 1.5263794658332082,
+        "se": 0.6175265564694538,
+        "lcb_one_sided": 0.5199000385731516,
+        "ci95_low": 0.5199000385731516,
+        "ci95_high": 2.9073389013460464,
+        "distinct_cluster_deltas": 8,
+        "n_positive_clusters": 8,
+        "signflip_p_one_sided": 0.00390625,
+        "insufficient_replication": false,
+        "low_cluster_warning": true
+      },
+      "treehfd_depth3_reg": {
+        "n_items": 192,
+        "n_clusters": 8,
+        "n_seeds": 6,
+        "n_strata": 4,
+        "bootstrap_mode": "crossed_seed_cluster",
+        "weighting": "equal_stratum",
+        "statistic": "mean",
+        "obs_candidate": 0.10115892976127731,
+        "obs_reference": 0.10985171503008867,
+        "signed_gain": 0.008692785268811357,
+        "se": 0.0032073262685370805,
+        "lcb_one_sided": 0.0027515972168838387,
+        "ci95_low": 0.0027515972168838387,
+        "ci95_high": 0.015347953509579862,
+        "distinct_cluster_deltas": 8,
+        "n_positive_clusters": 8,
+        "signflip_p_one_sided": 0.00390625,
+        "insufficient_replication": false,
+        "low_cluster_warning": true
+      }
+    }
+  },
+  "ledger_verification": {
+    "status": "VERIFIED",
+    "entries": 7,
+    "head_sha256": "aa315ed87215e36f0f2e4276bcde996d97fe6af50f1305b4d9526c623b78d907"
+  }
+}

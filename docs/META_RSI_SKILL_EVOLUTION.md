@@ -1,0 +1,18 @@
+# Iterative Meta-RSI Evolution of `/governed-loop-optimization` (`v2.0 -> v3.5`)
+
+This document traces how live multi-benchmark execution across `AutoSOTA` and adversarial Frontier Cowork reviews (`Opus 5.5, Max` and `GPT 6.2 Astra / GPT 6 Astra, Max`) iteratively hardened `scripts/governed_loop_guard.py` (`18/18` regression & fault-injection tests passing).
+
+---
+
+## Version Progression & Empirical Triggers
+
+| Version | Empirical / Audit Trigger | Failure Mode Exposed | Guard Fix Implemented | Regression Test |
+|---|---|---|---|---|
+| **`v3.1`** | Phase-1 Post-Mortem Audit | `PROVISIONAL_KEEP` incremented rollback streak under `confirm_only`, falsely halting winning search runs | Separate `active_streak` from `unresolved_rollbacks_since_promote`; only confirmed `PROMOTE` resets to `0` | `test_03` |
+| **`v3.1`** | Phase-1 Post-Mortem Audit | Omitting `items` on Confirm with `aa_noise_se=0` produced `SE=0` fail-open promotion; fake cluster-ID splitting inflated power | Fail closed on missing Confirm items, `SE==0`, `NaN/Inf`, and enforce exact `(id, cluster_id, stratum_id, seed_id)` parity | `test_01`, `test_02`, `test_04` |
+| **`v3.1`** | `A1` (`xPatch`) & `A2` (`Tropical`) | Unequal horizon counts silently reweighted benchmarks; item-level bootstrap ignored seed $\times$ block correlation and F1 count pooling | Unified resampler: `crossed_seed_cluster`, `equal_stratum`, `macro_f1_from_counts`, `ratio_from_sums`, `per_stratum_hard_floors/ceilings` | `test_05`, `test_06`, `test_11` |
+| **`v3.1`** | `A4` (`M3SVM-DP`) & `A3` (`FunSearch`) | In-process candidates could read labels or cache clean pre-DP weights (`_base_coef = coef_ - noise`); Holdout could be queried repeatedly | Added `audit-leaks` (AST/regex + `.diff` scanner), `run-isolated` (`python -I` `predict` & `causal_online` stdio), and `gate-holdout` (`O_CREAT \| O_EXCL` write-once seal) | `test_08`, `test_09`, `test_12`, `test_13` |
+| **`v3.2`** | Live Wave-1 (`A2`, `A4`) Execution | (a) Subprocess candidate `import torch` cold-start inflated `wall_clock_sec` vs in-process baseline; (b) `cluster_id == stratum_id` dropped bootstrap draw multiplicity | (a) Measure symmetric `eval_wall_clock_sec` identically across `run-isolated` for baselines and candidates; (b) preserve `stratum_multiplicity` when clusters nest in strata | `test_14` |
+| **`v3.3`** | `Opus 5.5, Max` Pre-Release Audit | Small-cluster (`G < 20`) percentile bootstrap under-coverage; mid-campaign Confirm rule edits; Search continuing after `K` Confirm looks spent; Confirm tripwire leakage | Paired cluster Rademacher sign-flip gate (`2^-G <= eff_alpha`), `rules_sha256` pinning across Confirm looks, terminal `halt_recommended=true` at `K` looks, strict `--proposer-out` Confirm redaction | `test_15`, `test_16` |
+| **`v3.4`** | Live Wave-2 `B5` (`TreeHFD`) | Unstable paper baseline (`depth=6` MSE `60+` on 1 seed) created right-skewed positive gains where `mean - z * stdev < 0` despite `8/8` positive clusters and `boot_lcb = +2.17` | Use percentile-bootstrap LCB directly rather than capping by symmetric `mean - z * stdev` | `test_17` |
+| **`v3.5`** | `GPT 6 Astra, Max` Sign-Off Audit | `G=16` (`B1`) used `8,000`-draw MC (`0.000125`) instead of exact `2^16 = 65,536` (`1.53e-5`); sign-flip tested `0` margin instead of `min_improvement`; external `aa_noise_se` subtracted post-hoc | Exhaustive `2^G` sign-flip up to `G <= 16` + `signflip_method`; shift cluster deltas by `min_improvement`; convolve external Gaussian noise jointly inside each bootstrap replicate | `test_18` |

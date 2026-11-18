@@ -1,0 +1,51 @@
+{
+  "benchmark": "A3_FunSearch_CausalOnline_v3",
+  "promoted_candidate": null,
+  "confirm_verdicts": {
+    "a3_cand_03_causal_quantile_match": {
+      "best_fit": {
+        "cand": 0.06466128086103978,
+        "ref": 0.0666451863401841,
+        "gain": 0.0019839054791443156,
+        "lcb": 0.0006970695004127852,
+        "decision": "PROMOTE"
+      },
+      "funsearch_or": {
+        "cand": 0.06466128086103978,
+        "ref": 0.062414361736210976,
+        "gain": -0.002246919124828807,
+        "lcb": -0.0041881304630548444,
+        "decision": "ROLLBACK"
+      }
+    },
+    "a3_cand_02_static_deadzone": {
+      "best_fit": {
+        "cand": 0.06695764197878736,
+        "ref": 0.0666451863401841,
+        "gain": -0.00031245563860325676,
+        "lcb": -0.0014155416443567734,
+        "decision": "ROLLBACK"
+      },
+      "funsearch_or": {
+        "cand": 0.06695764197878736,
+        "ref": 0.062414361736210976,
+        "gain": -0.004543280242576379,
+        "lcb": -0.006799862113337602,
+        "decision": "ROLLBACK"
+      }
+    }
+  },
+  "holdout_reserve": {
+    "status": "BLOCKED_NOT_CONFIRMED",
+    "candidate_id": "a3_cand_03_causal_quantile_match",
+    "missing_or_failed_comparators": [
+      "funsearch_or:ROLLBACK"
+    ],
+    "artifact_sha_mismatches": []
+  },
+  "ledger_verification": {
+    "status": "VERIFIED",
+    "entries": 8,
+    "head_sha256": "d6b0c42dd1e7bcad4a0d1e68f56700710575577837f24da32d2f6bccd6ee022a"
+  }
+}

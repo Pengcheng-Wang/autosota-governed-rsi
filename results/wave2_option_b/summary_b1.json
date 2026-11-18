@@ -1,0 +1,118 @@
+{
+  "benchmark": "B1_Paper88_ChannelNorm_ETT16_v33",
+  "search_l96_vs_l336_confound": {
+    "rmlp_l96_mse": 0.2868125283096986,
+    "rmlp_base_l336_mse": 0.26722197141129356,
+    "rmlp_cn_autosota_l336_mse": 0.26380503293171864
+  },
+  "best_candidate": "b1_cand_02_cn_drift_blend",
+  "confirm_ridge_l336_diag_mse": 0.4393825527408949,
+  "confirm_verdicts": {
+    "rmlp_base_l336": {
+      "cand": 0.4388811366640129,
+      "ref": 0.4532116875947454,
+      "gain": 0.014330550930732489,
+      "lcb": 0.009594766615414859,
+      "decision": "PROMOTE"
+    },
+    "rmlp_cn_autosota_l336": {
+      "cand": 0.4388811366640129,
+      "ref": 0.45207426313071974,
+      "gain": 0.01319312646670684,
+      "lcb": 0.00789774380350322,
+      "decision": "PROMOTE"
+    }
+  },
+  "holdout_reserve": {
+    "status": "RESERVED",
+    "seal_file": "/scratch/autosota_governed_v2/tracks/bench_b1_channelnorm/HOLDOUT_SEAL.json",
+    "schema_version": "3.0",
+    "reserved_at_utc": "2026-11-17T23:49:42.797730+00:00",
+    "candidate_id": "b1_cand_02_cn_drift_blend",
+    "candidate_artifact_sha256": "eac674f5f3f8a8a168584e303c1136098a13954cab119232e7dd58d528dfeaa3",
+    "manifest_root_sha256": "350f63d75c011051378a9c79bf170b400b6f38a71f3a70af6fb23458447abc04",
+    "rules_sha256": "c86796e81ac746145dae720cd798b0e371896fdf6222c1fc814830808efdc600",
+    "ledger_head_at_reserve_sha256": "58c9873230903e28a92c7f10896f5701a061529af31280b5f0d1cc17de7b23e3",
+    "required_comparators_verified": [
+      "rmlp_base_l336",
+      "rmlp_cn_autosota_l336"
+    ]
+  },
+  "holdout_l96_diag_mse": 0.40829642225281076,
+  "holdout_finalized": {
+    "status": "FINALIZED",
+    "seal_file": "/scratch/autosota_governed_v2/tracks/bench_b1_channelnorm/HOLDOUT_SEAL.json",
+    "holdout_seal_sha256": "983ee190319a8cdff52f64c774424e1766fe360c4debc6a710ff8df4d3db23a2",
+    "ledger_entry_sha256": "e9b3396af4cd2d8a75095fc10d742a23ed16023828a2602a165521e71d976cfc",
+    "comparisons": {
+      "rmlp_base_l336": {
+        "n_items": 1230,
+        "n_clusters": 16,
+        "n_seeds": 5,
+        "n_strata": 16,
+        "bootstrap_mode": "crossed_seed_cluster",
+        "weighting": "equal_stratum",
+        "statistic": "mean",
+        "obs_candidate": 0.3567906217584893,
+        "obs_reference": 0.37341691628401674,
+        "signed_gain": 0.01662629452552744,
+        "se": 0.0012803134875362407,
+        "lcb_one_sided": 0.014272171040350778,
+        "ci95_low": 0.014272171040350778,
+        "ci95_high": 0.019274010192228797,
+        "distinct_cluster_deltas": 16,
+        "n_positive_clusters": 16,
+        "signflip_p_one_sided": 0.000125,
+        "insufficient_replication": false,
+        "low_cluster_warning": false
+      },
+      "rmlp_cn_autosota_l336": {
+        "n_items": 1230,
+        "n_clusters": 16,
+        "n_seeds": 5,
+        "n_strata": 16,
+        "bootstrap_mode": "crossed_seed_cluster",
+        "weighting": "equal_stratum",
+        "statistic": "mean",
+        "obs_candidate": 0.3567906217584893,
+        "obs_reference": 0.36870101374289466,
+        "signed_gain": 0.011910391984405355,
+        "se": 0.0011174755551834677,
+        "lcb_one_sided": 0.009699754979735298,
+        "ci95_low": 0.009699754979735298,
+        "ci95_high": 0.014072664153134296,
+        "distinct_cluster_deltas": 16,
+        "n_positive_clusters": 16,
+        "signflip_p_one_sided": 0.000125,
+        "insufficient_replication": false,
+        "low_cluster_warning": false
+      },
+      "ridge_l336": {
+        "n_items": 1230,
+        "n_clusters": 16,
+        "n_seeds": 5,
+        "n_strata": 16,
+        "bootstrap_mode": "crossed_seed_cluster",
+        "weighting": "equal_stratum",
+        "statistic": "mean",
+        "obs_candidate": 0.3567906217584893,
+        "obs_reference": 0.36179208246167516,
+        "signed_gain": 0.005001460703185856,
+        "se": 0.0018250819070758342,
+        "lcb_one_sided": 0.0017140863888706614,
+        "ci95_low": 0.0017140863888706614,
+        "ci95_high": 0.00899423277599315,
+        "distinct_cluster_deltas": 16,
+        "n_positive_clusters": 14,
+        "signflip_p_one_sided": 0.001,
+        "insufficient_replication": false,
+        "low_cluster_warning": false
+      }
+    }
+  },
+  "ledger_verification": {
+    "status": "VERIFIED",
+    "entries": 6,
+    "head_sha256": "e9b3396af4cd2d8a75095fc10d742a23ed16023828a2602a165521e71d976cfc"
+  }
+}

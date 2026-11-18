@@ -1,0 +1,34 @@
+{
+  "benchmark": "A5_FastFeatureCP_6TabularDatasets_v3",
+  "best_candidate": "a5_cand_02_cqr_pinball",
+  "confirm_verdicts": {
+    "split_cp_base": {
+      "cand": 2.174994987435639,
+      "ref": 2.1662119269991913,
+      "gain": -0.00878306043644761,
+      "lcb": -0.9731094457519549,
+      "decision": "ROLLBACK"
+    },
+    "ffcp_taylor_base": {
+      "cand": 2.174994987435639,
+      "ref": 2.1662119122222063,
+      "gain": -0.008783075213432578,
+      "lcb": -0.9763275343924764,
+      "decision": "ROLLBACK"
+    }
+  },
+  "holdout_reserve": {
+    "status": "BLOCKED_NOT_CONFIRMED",
+    "candidate_id": "a5_cand_02_cqr_pinball",
+    "missing_or_failed_comparators": [
+      "split_cp_base:ROLLBACK",
+      "ffcp_taylor_base:ROLLBACK"
+    ],
+    "artifact_sha_mismatches": []
+  },
+  "ledger_verification": {
+    "status": "VERIFIED",
+    "entries": 6,
+    "head_sha256": "d9198e5ec1b6059de87bacddfeffd9f116c9fc6586989a2585579d6b34c08fcb"
+  }
+}

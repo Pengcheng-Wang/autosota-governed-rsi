@@ -1,0 +1,40 @@
+{
+  "benchmark": "B4_Paper65_SKEMPI_ProteinBinding_DisjointComplex_v33",
+  "best_candidate": "b4_cand_04_within_complex_z_rank_blend",
+  "confirm_verdicts": {
+    "stab_ddg_base": {
+      "cand": 0.5286622234616483,
+      "ref": 0.4591083567800614,
+      "gain": 0.06955386668158686,
+      "lcb": 0.019257631083814453,
+      "decision": "PROMOTE"
+    },
+    "foldx_base": {
+      "cand": 0.5286622234616483,
+      "ref": 0.466467279149287,
+      "gain": 0.06219494431236128,
+      "lcb": -0.003076997632594669,
+      "decision": "ROLLBACK"
+    },
+    "flexddg_base": {
+      "cand": 0.5286622234616483,
+      "ref": 0.4271890052037759,
+      "gain": 0.10147321825787237,
+      "lcb": 0.04143303009400968,
+      "decision": "PROMOTE"
+    }
+  },
+  "holdout_reserve": {
+    "status": "BLOCKED_NOT_CONFIRMED",
+    "candidate_id": "b4_cand_04_within_complex_z_rank_blend",
+    "missing_or_failed_comparators": [
+      "foldx_base:ROLLBACK"
+    ],
+    "artifact_sha_mismatches": []
+  },
+  "ledger_verification": {
+    "status": "VERIFIED",
+    "entries": 7,
+    "head_sha256": "491abd7da880a4e6d4f32772c68dcd8cba6e9fcbc88d6c7ddbdb2ab6bd19ef3c"
+  }
+}

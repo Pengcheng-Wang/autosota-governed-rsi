@@ -1,0 +1,48 @@
+{
+  "benchmark": "B2_Paper92_KmeansLocalOpt_5Datasets_v33",
+  "autosota_20restarts_runtime_block": {
+    "decision": "ROLLBACK",
+    "tripwires": [
+      "baseline_ratio_too_high:wall_clock_sec_ratio=15.7894>1.4"
+    ]
+  },
+  "best_candidate": "b2_cand_01_hartigan_only",
+  "confirm_verdicts": {
+    "lo_kmeans_paper": {
+      "cand": 0.34163356961596697,
+      "ref": 0.34218366041193915,
+      "gain": 0.0005500907959721801,
+      "lcb": -0.003978055038461825,
+      "decision": "ROLLBACK"
+    },
+    "kmeans_lloyd_base": {
+      "cand": 0.34163356961596697,
+      "ref": 0.34401647501624855,
+      "gain": 0.0023829054002815764,
+      "lcb": 0.0010089188501417859,
+      "decision": "ROLLBACK"
+    },
+    "equal_compute_kmeanspp": {
+      "cand": 0.34163356961596697,
+      "ref": 0.34042214771034374,
+      "gain": -0.0012114219056232334,
+      "lcb": -0.005322651227800179,
+      "decision": "ROLLBACK"
+    }
+  },
+  "holdout_reserve": {
+    "status": "BLOCKED_NOT_CONFIRMED",
+    "candidate_id": "b2_cand_01_hartigan_only",
+    "missing_or_failed_comparators": [
+      "kmeans_lloyd_base:ROLLBACK",
+      "lo_kmeans_paper:ROLLBACK",
+      "equal_compute_kmeanspp:ROLLBACK"
+    ],
+    "artifact_sha_mismatches": []
+  },
+  "ledger_verification": {
+    "status": "VERIFIED",
+    "entries": 6,
+    "head_sha256": "1949b35e0b9e40d34f98d10daaa3387264582cb34fc68ef649f3923a6e75e9d6"
+  }
+}

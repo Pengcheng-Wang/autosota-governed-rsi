@@ -1,0 +1,93 @@
+{
+  "benchmark": "A1_xPatch_16Cell_ETT_v3",
+  "finalists_tested": [
+    "a1_cand_02_phase1_ms",
+    "a1_cand_01_linear_last"
+  ],
+  "promoted_all_3_comparators": null,
+  "confirm_verdicts_by_finalist": {
+    "a1_cand_02_phase1_ms": {
+      "xpatch": {
+        "candidate_mse": 0.43998958470823857,
+        "comparator_mse": 0.4481561825367626,
+        "signed_gain": 0.008166597828524025,
+        "lcb": 0.0030700832055073173,
+        "ci95": [
+          0.003716932515006599,
+          0.012768266120121552
+        ],
+        "decision": "PROMOTE"
+      },
+      "autosota_l336": {
+        "candidate_mse": 0.43998958470823857,
+        "comparator_mse": 0.452578376859879,
+        "signed_gain": 0.012588792151640438,
+        "lcb": 0.004031391407460172,
+        "ci95": [
+          0.005161404721614027,
+          0.020057007021908213
+        ],
+        "decision": "PROMOTE"
+      },
+      "ridge": {
+        "candidate_mse": 0.43998958470823857,
+        "comparator_mse": 0.43943210939410693,
+        "signed_gain": -0.0005574753141316391,
+        "lcb": -0.009188278458071741,
+        "ci95": [
+          -0.007973690686579271,
+          0.007222627226801226
+        ],
+        "decision": "ROLLBACK"
+      }
+    },
+    "a1_cand_01_linear_last": {
+      "xpatch": {
+        "candidate_mse": 0.43893733874883595,
+        "comparator_mse": 0.4481561825367626,
+        "signed_gain": 0.009218843787926645,
+        "lcb": -0.003907280088875196,
+        "ci95": [
+          -0.002095154547338607,
+          0.020679134545481648
+        ],
+        "decision": "INCONCLUSIVE_RETEST"
+      },
+      "autosota_l336": {
+        "candidate_mse": 0.43893733874883595,
+        "comparator_mse": 0.452578376859879,
+        "signed_gain": 0.013641038111043058,
+        "lcb": 0.0017715195759601364,
+        "ci95": [
+          0.0032708595763761283,
+          0.023943459272003365
+        ],
+        "decision": "PROMOTE"
+      },
+      "ridge": {
+        "candidate_mse": 0.43893733874883595,
+        "comparator_mse": 0.43943210939410693,
+        "signed_gain": 0.000494770645270981,
+        "lcb": 7.183588153863996e-05,
+        "ci95": [
+          0.00012338383973198308,
+          0.0008359692541599628
+        ],
+        "decision": "ROLLBACK"
+      }
+    }
+  },
+  "gate_holdout_strict_3comp_reserve": {
+    "status": "BLOCKED_NOT_CONFIRMED",
+    "candidate_id": "a1_cand_02_phase1_ms",
+    "missing_or_failed_comparators": [
+      "ridge:ROLLBACK"
+    ],
+    "artifact_sha_mismatches": []
+  },
+  "ledger_verification": {
+    "status": "VERIFIED",
+    "entries": 11,
+    "head_sha256": "53930c433cf730e4fcef1c7dd3481ebeeaa10f0859f24fc7b0733699e179055d"
+  }
+}

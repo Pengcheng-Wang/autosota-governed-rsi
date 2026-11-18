@@ -1,0 +1,184 @@
+{
+  "benchmark": "A4_M3SVM_DifferentialPrivacy_8Datasets_v3",
+  "autosota_static_leak_audit": {
+    "status": "LEAK_DETECTED",
+    "total_findings": 2,
+    "blocking_findings": 2,
+    "findings": [
+      {
+        "file": "/scratch/autosota_governed_v2/improved-papers/paper-96-M3SVM/main-sklearn.py",
+        "line": 62,
+        "severity": "CRITICAL",
+        "code": "DP_NOISE_SUBTRACTION_OR_CLEAN_CACHE",
+        "detail": "self._base_coef = self.coef_ - noise  # clean weights before noise"
+      },
+      {
+        "file": "/scratch/autosota_governed_v2/improved-papers/paper-96-M3SVM/main-sklearn.py",
+        "line": 111,
+        "severity": "CRITICAL",
+        "code": "DP_NOISE_SUBTRACTION_OR_CLEAN_CACHE",
+        "detail": "noisy_coef = self._base_coef + np.random.normal(0, self._sigma, self._base_coef.shape)"
+      }
+    ]
+  },
+  "autosota_k50_runtime_ceiling_block": {
+    "decision": "ROLLBACK",
+    "tripwires": [
+      "per_stratum_ceiling_failed:Cornell.eps_spent=21.213203>3.0",
+      "per_stratum_ceiling_failed:Dermatology.eps_spent=21.213203>3.0",
+      "per_stratum_ceiling_failed:Glass.eps_spent=21.213203>3.0",
+      "per_stratum_ceiling_failed:HHAR.eps_spent=21.213203>3.0",
+      "per_stratum_ceiling_failed:ISOLET.eps_spent=21.213203>3.0",
+      "per_stratum_ceiling_failed:ORL.eps_spent=21.213203>3.0",
+      "per_stratum_ceiling_failed:USPS.eps_spent=21.213203>3.0",
+      "per_stratum_ceiling_failed:Vehicle.eps_spent=21.213203>3.0"
+    ]
+  },
+  "best_candidate": "a4_cand_04_adaptive_linear_multinomial",
+  "confirm_verdicts": {
+    "pmsvm_dp_base": {
+      "cand": 0.43566189551662493,
+      "ref": 0.309582846820943,
+      "gain": 0.12607904869568193,
+      "lcb": 0.06995773782017367,
+      "decision": "PROMOTE"
+    },
+    "opera_advcom_dp": {
+      "cand": 0.43566189551662493,
+      "ref": 0.16898269721729373,
+      "gain": 0.2666791982993312,
+      "lcb": 0.18918494846618383,
+      "decision": "PROMOTE"
+    }
+  },
+  "holdout_reserve": {
+    "status": "RESERVED",
+    "seal_file": "/scratch/autosota_governed_v2/tracks/bench_a4_m3svm_dp/HOLDOUT_SEAL.json",
+    "schema_version": "3.0",
+    "reserved_at_utc": "2026-11-17T22:56:39.414935+00:00",
+    "candidate_id": "a4_cand_04_adaptive_linear_multinomial",
+    "candidate_artifact_sha256": "ba620d10348899d47872bceab2df3b2ef77b1cc94e22df07e385afdbcb5e353e",
+    "manifest_root_sha256": "4ba81c8cd6ebad67c520b2989cda80ecd19bf16b8981c8f08ecab0e15c15db31",
+    "rules_sha256": "69a9734a19bb4d9a7ec531c1cf559b704e493d1025432159d23a15d641e6ba02",
+    "ledger_head_at_reserve_sha256": "776a54765394e03edd900fbd97bea4420291d932693c91b70541aa3f45f0c28d",
+    "required_comparators_verified": [
+      "pmsvm_dp_base",
+      "opera_advcom_dp"
+    ]
+  },
+  "holdout_finalized": {
+    "status": "FINALIZED",
+    "seal_file": "/scratch/autosota_governed_v2/tracks/bench_a4_m3svm_dp/HOLDOUT_SEAL.json",
+    "holdout_seal_sha256": "8a6421e8bd3150fa4161f947b517551c7c98421b88c75c8fb17fa96287219e9e",
+    "ledger_entry_sha256": "c8f46ce7b090646a39324bb9348cbfec704309c49a5e968560a252f6aca11d2f",
+    "comparisons": {
+      "pmsvm_dp_base": {
+        "n_items": 256,
+        "n_clusters": 4,
+        "n_seeds": 8,
+        "n_strata": 8,
+        "bootstrap_mode": "crossed_seed_cluster",
+        "weighting": "equal_stratum",
+        "statistic": "mean",
+        "obs_candidate": 0.4377454709899628,
+        "obs_reference": 0.3068015445240656,
+        "signed_gain": 0.1309439264658972,
+        "se": 0.024186391414204946,
+        "lcb_one_sided": 0.08435985191130008,
+        "ci95_low": 0.08435985191130008,
+        "ci95_high": 0.17901617701581363,
+        "distinct_cluster_deltas": 4,
+        "n_positive_clusters": 4,
+        "insufficient_replication": false,
+        "low_cluster_warning": true
+      },
+      "opera_advcom_dp": {
+        "n_items": 256,
+        "n_clusters": 4,
+        "n_seeds": 8,
+        "n_strata": 8,
+        "bootstrap_mode": "crossed_seed_cluster",
+        "weighting": "equal_stratum",
+        "statistic": "mean",
+        "obs_candidate": 0.4377454709899628,
+        "obs_reference": 0.1774611369434868,
+        "signed_gain": 0.260284334046476,
+        "se": 0.024880953532203938,
+        "lcb_one_sided": 0.21346885478173588,
+        "ci95_low": 0.21346885478173588,
+        "ci95_high": 0.30967385912698414,
+        "distinct_cluster_deltas": 4,
+        "n_positive_clusters": 4,
+        "insufficient_replication": false,
+        "low_cluster_warning": true
+      },
+      "autosota_k50_budgeted_eps3": {
+        "n_items": 256,
+        "n_clusters": 4,
+        "n_seeds": 8,
+        "n_strata": 8,
+        "bootstrap_mode": "crossed_seed_cluster",
+        "weighting": "equal_stratum",
+        "statistic": "mean",
+        "obs_candidate": 0.4377454709899628,
+        "obs_reference": 0.30281636937924605,
+        "signed_gain": 0.13492910161071675,
+        "se": 0.03457071001008078,
+        "lcb_one_sided": 0.06012179491409669,
+        "ci95_low": 0.06012179491409669,
+        "ci95_high": 0.19768777169213214,
+        "distinct_cluster_deltas": 4,
+        "n_positive_clusters": 4,
+        "insufficient_replication": false,
+        "low_cluster_warning": true
+      }
+    }
+  },
+  "holdout_per_dataset_accuracy": {
+    "pmsvm_dp_base_eps3": {
+      "Cornell": 0.34056886227544914,
+      "Dermatology": 0.32638888888888884,
+      "Glass": 0.25,
+      "HHAR": 0.5616071428571427,
+      "ISOLET": 0.11217948717948718,
+      "ORL": 0.0234375,
+      "USPS": 0.595,
+      "Vehicle": 0.2485207100591716
+    },
+    "autosota_k50_budgeted_eps3": {
+      "Cornell": 0.4041916167664671,
+      "Dermatology": 0.3975694444444444,
+      "Glass": 0.11337209302325582,
+      "HHAR": 0.5146428571428572,
+      "ISOLET": 0.10456730769230768,
+      "ORL": 0.026562500000000003,
+      "USPS": 0.5980357142857142,
+      "Vehicle": 0.26331360946745563
+    },
+    "autosota_k50_unbudgeted_eps21_leak": {
+      "Cornell": 0.7649700598802396,
+      "Dermatology": 0.9513888888888888,
+      "Glass": 0.23255813953488375,
+      "HHAR": 0.7757142857142858,
+      "ISOLET": 0.577323717948718,
+      "ORL": 0.0359375,
+      "USPS": 0.7823214285714286,
+      "Vehicle": 0.35133136094674555
+    },
+    "a4_cand_04_adaptive_linear_multinomial": {
+      "Cornell": 0.6946107784431138,
+      "Dermatology": 0.8506944444444444,
+      "Glass": 0.3401162790697675,
+      "HHAR": 0.5608928571428572,
+      "ISOLET": 0.2596153846153846,
+      "ORL": 0.0234375,
+      "USPS": 0.5110714285714286,
+      "Vehicle": 0.2729289940828402
+    }
+  },
+  "ledger_verification": {
+    "status": "VERIFIED",
+    "entries": 9,
+    "head_sha256": "c8f46ce7b090646a39324bb9348cbfec704309c49a5e968560a252f6aca11d2f"
+  }
+}

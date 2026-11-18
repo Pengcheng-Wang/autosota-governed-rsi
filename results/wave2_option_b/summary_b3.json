@@ -1,0 +1,147 @@
+{
+  "benchmark": "B3_Paper104_BalancedActiveInf_4DGPs_v33",
+  "best_candidate": "b3_cand_03_defensive_ppipp_cube",
+  "confirm_verdicts": {
+    "cube_paper_base": {
+      "cand": 0.8744288472078433,
+      "ref": 1.1940058652372298,
+      "gain": 0.31957701802938654,
+      "lcb": 0.3070371047482188,
+      "decision": "PROMOTE"
+    },
+    "autosota_xgb_lr01": {
+      "cand": 0.8744288472078433,
+      "ref": 0.9156528889255703,
+      "gain": 0.04122404171772698,
+      "lcb": 0.03120891310717846,
+      "decision": "PROMOTE"
+    }
+  },
+  "holdout_reserve": {
+    "status": "RESERVED",
+    "seal_file": "/scratch/autosota_governed_v2/tracks/bench_b3_active_inference/HOLDOUT_SEAL.json",
+    "schema_version": "3.0",
+    "reserved_at_utc": "2026-11-18T00:05:07.480267+00:00",
+    "candidate_id": "b3_cand_03_defensive_ppipp_cube",
+    "candidate_artifact_sha256": "1a89493175a6032a04747bf56e691ddc255c3ae93a500729834229d69ed9b483",
+    "manifest_root_sha256": "c5b8fde33a0ec167482b31ed0f8c34dbb91dfe69a6cfaf97d0cb12763af12489",
+    "rules_sha256": "0dc207c42f9a4b99a55e26663600b11fc2bc2104fdb47046259c2e729c64865e",
+    "ledger_head_at_reserve_sha256": "a9fc90694344cb2db702e78af04cbf86c13a0a6fd32ad5db02ea36625d9e8a7b",
+    "required_comparators_verified": [
+      "cube_paper_base",
+      "autosota_xgb_lr01"
+    ]
+  },
+  "holdout_classical_srs_width": 3.6306836877231943,
+  "holdout_stratum_metrics": {
+    "cube_paper_base": {
+      "friedman_std": {
+        "ci_width": 0.9619578223303081,
+        "coverage": 0.9681249999999999
+      },
+      "friedman_hetero": {
+        "ci_width": 1.2303777222748782,
+        "coverage": 0.946875
+      },
+      "friedman_heavytail": {
+        "ci_width": 1.0474384489088018,
+        "coverage": 0.97625
+      },
+      "friedman_interact": {
+        "ci_width": 1.100328708257071,
+        "coverage": 0.9712500000000001
+      }
+    },
+    "autosota_xgb_lr01": {
+      "friedman_std": {
+        "ci_width": 0.7222770474722061,
+        "coverage": 0.8625
+      },
+      "friedman_hetero": {
+        "ci_width": 1.0975302682757815,
+        "coverage": 0.89875
+      },
+      "friedman_heavytail": {
+        "ci_width": 0.8776173275176159,
+        "coverage": 0.8787499999999999
+      },
+      "friedman_interact": {
+        "ci_width": 0.6354221183272781,
+        "coverage": 0.9175000000000001
+      }
+    },
+    "b3_cand_03_defensive_ppipp_cube": {
+      "friedman_std": {
+        "ci_width": 0.6869488501187453,
+        "coverage": 0.903125
+      },
+      "friedman_hetero": {
+        "ci_width": 1.0285615869504714,
+        "coverage": 0.9481249999999999
+      },
+      "friedman_heavytail": {
+        "ci_width": 0.8114883540599866,
+        "coverage": 0.885
+      },
+      "friedman_interact": {
+        "ci_width": 0.6531410238116382,
+        "coverage": 0.89875
+      }
+    }
+  },
+  "holdout_finalized": {
+    "status": "FINALIZED",
+    "seal_file": "/scratch/autosota_governed_v2/tracks/bench_b3_active_inference/HOLDOUT_SEAL.json",
+    "holdout_seal_sha256": "12c2987c0f5060c8694a195bbd0204a495cea34eafd127d71bd74be5e553120e",
+    "ledger_entry_sha256": "ec9df50802d73d87bea1700d43510975533d8d0d355830cd85f85261f3e8c325",
+    "comparisons": {
+      "cube_paper_base": {
+        "n_items": 320,
+        "n_clusters": 10,
+        "n_seeds": 8,
+        "n_strata": 4,
+        "bootstrap_mode": "crossed_seed_cluster",
+        "weighting": "equal_stratum",
+        "statistic": "mean",
+        "obs_candidate": 0.7950349537352103,
+        "obs_reference": 1.0850256754427647,
+        "signed_gain": 0.28999072170755447,
+        "se": 0.0034016926811624645,
+        "lcb_one_sided": 0.28344599374921664,
+        "ci95_low": 0.28344599374921664,
+        "ci95_high": 0.2965850744098504,
+        "distinct_cluster_deltas": 10,
+        "n_positive_clusters": 10,
+        "signflip_p_one_sided": 0.0009765625,
+        "insufficient_replication": false,
+        "low_cluster_warning": false
+      },
+      "autosota_xgb_lr01": {
+        "n_items": 320,
+        "n_clusters": 10,
+        "n_seeds": 8,
+        "n_strata": 4,
+        "bootstrap_mode": "crossed_seed_cluster",
+        "weighting": "equal_stratum",
+        "statistic": "mean",
+        "obs_candidate": 0.7950349537352103,
+        "obs_reference": 0.8332116903982203,
+        "signed_gain": 0.038176736663010025,
+        "se": 0.0027302548908282862,
+        "lcb_one_sided": 0.03217856369222161,
+        "ci95_low": 0.03217856369222161,
+        "ci95_high": 0.04293179546634107,
+        "distinct_cluster_deltas": 10,
+        "n_positive_clusters": 10,
+        "signflip_p_one_sided": 0.0009765625,
+        "insufficient_replication": false,
+        "low_cluster_warning": false
+      }
+    }
+  },
+  "ledger_verification": {
+    "status": "VERIFIED",
+    "entries": 6,
+    "head_sha256": "ec9df50802d73d87bea1700d43510975533d8d0d355830cd85f85261f3e8c325"
+  }
+}

@@ -1,0 +1,1166 @@
+{
+  "total_autosota_repos_in_git": 612,
+  "improved_papers_count": 105,
+  "icml_2026_repo_dirs": 455,
+  "cvpr_2026_repo_dirs": 52,
+  "improved_105_by_domain": {
+    "vision_multimodal_audio": 11,
+    "other_ml": 24,
+    "combinatorial_opt_rl_routing": 6,
+    "time_series": 24,
+    "llm_nlp_reasoning": 17,
+    "graph_bio_physics": 4,
+    "conformal_dp_stats_causal": 19
+  },
+  "improved_105_protocol_risk_flags": {
+    "tta_or_test_resolution": 9,
+    "compute_or_ensemble_inflation": 22,
+    "llm_judge_or_proxy_metric": 2,
+    "sub_0p5pct_unconfirmed_delta": 11,
+    "lookback_or_split_override": 1,
+    "tiny_gain_within_seed_noise": 2
+  },
+  "improved_105_with_any_risk_flag": 42,
+  "improved_105_gate1_gpu_candidates": 86,
+  "repos": [
+    {
+      "id": 1,
+      "folder": "paper-1-SAVVY",
+      "domain": "vision_multimodal_audio",
+      "claimed_gain_str": "5.90%",
+      "py_count": 354,
+      "data_like_count": 33,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": false
+    },
+    {
+      "id": 2,
+      "folder": "paper-2-PINet",
+      "domain": "other_ml",
+      "claimed_gain_str": "16.72%",
+      "py_count": 42,
+      "data_like_count": 0,
+      "gate1_risk_flags": [
+        "tta_or_test_resolution"
+      ],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 3,
+      "folder": "paper-3-DMSQD",
+      "domain": "combinatorial_opt_rl_routing",
+      "claimed_gain_str": "7.32%",
+      "py_count": 0,
+      "data_like_count": 0,
+      "gate1_risk_flags": [
+        "compute_or_ensemble_inflation"
+      ],
+      "gate1_candidate_for_gpu_audit": false
+    },
+    {
+      "id": 4,
+      "folder": "paper-4-DecentralAttn",
+      "domain": "time_series",
+      "claimed_gain_str": "4.45%",
+      "py_count": 19,
+      "data_like_count": 1,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 5,
+      "folder": "paper-5-TSAE",
+      "domain": "llm_nlp_reasoning",
+      "claimed_gain_str": "2.25%",
+      "py_count": 34,
+      "data_like_count": 1,
+      "gate1_risk_flags": [
+        "llm_judge_or_proxy_metric"
+      ],
+      "gate1_candidate_for_gpu_audit": false
+    },
+    {
+      "id": 6,
+      "folder": "paper-6-PhySense",
+      "domain": "combinatorial_opt_rl_routing",
+      "claimed_gain_str": "4.16%",
+      "py_count": 22,
+      "data_like_count": 1,
+      "gate1_risk_flags": [
+        "compute_or_ensemble_inflation"
+      ],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 7,
+      "folder": "paper-7-ReasoningIQA",
+      "domain": "vision_multimodal_audio",
+      "claimed_gain_str": "2.68%",
+      "py_count": 2,
+      "data_like_count": 3,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 8,
+      "folder": "paper-8-MeanFlows",
+      "domain": "other_ml",
+      "claimed_gain_str": "0.14%",
+      "py_count": 1,
+      "data_like_count": 0,
+      "gate1_risk_flags": [
+        "sub_0p5pct_unconfirmed_delta"
+      ],
+      "gate1_candidate_for_gpu_audit": false
+    },
+    {
+      "id": 9,
+      "folder": "paper-9-ScoreMissing",
+      "domain": "other_ml",
+      "claimed_gain_str": "0.14%",
+      "py_count": 66,
+      "data_like_count": 5,
+      "gate1_risk_flags": [
+        "compute_or_ensemble_inflation",
+        "sub_0p5pct_unconfirmed_delta"
+      ],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 10,
+      "folder": "paper-10-SuitabilityFilter",
+      "domain": "other_ml",
+      "claimed_gain_str": "1.56%",
+      "py_count": 12,
+      "data_like_count": 4,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 11,
+      "folder": "paper-11-OSD",
+      "domain": "time_series",
+      "claimed_gain_str": "0.25%",
+      "py_count": 150,
+      "data_like_count": 5,
+      "gate1_risk_flags": [
+        "tta_or_test_resolution",
+        "sub_0p5pct_unconfirmed_delta"
+      ],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 12,
+      "folder": "paper-12-EfficientQAT",
+      "domain": "other_ml",
+      "claimed_gain_str": "6.08%",
+      "py_count": 25,
+      "data_like_count": 13,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 13,
+      "folder": "paper-13-APPL",
+      "domain": "llm_nlp_reasoning",
+      "claimed_gain_str": "14.29%",
+      "py_count": 97,
+      "data_like_count": 2,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 14,
+      "folder": "paper-14-PIGuard",
+      "domain": "llm_nlp_reasoning",
+      "claimed_gain_str": "3.66%",
+      "py_count": 10,
+      "data_like_count": 1,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 15,
+      "folder": "paper-15-FRSpec",
+      "domain": "llm_nlp_reasoning",
+      "claimed_gain_str": "13.44%",
+      "py_count": 28,
+      "data_like_count": 0,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 16,
+      "folder": "paper-16-MathFusion",
+      "domain": "llm_nlp_reasoning",
+      "claimed_gain_str": "20.97%",
+      "py_count": 55,
+      "data_like_count": 4,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 17,
+      "folder": "paper-17-MultimodalGLP",
+      "domain": "vision_multimodal_audio",
+      "claimed_gain_str": "0.83%",
+      "py_count": 3,
+      "data_like_count": 1,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 18,
+      "folder": "paper-18-CoTSynth",
+      "domain": "llm_nlp_reasoning",
+      "claimed_gain_str": "3.68%",
+      "py_count": 13,
+      "data_like_count": 2,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 19,
+      "folder": "paper-19-DyScaleUT",
+      "domain": "other_ml",
+      "claimed_gain_str": "2.12%",
+      "py_count": 14,
+      "data_like_count": 2,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 20,
+      "folder": "paper-20-Aristotle",
+      "domain": "llm_nlp_reasoning",
+      "claimed_gain_str": "1.68%",
+      "py_count": 5,
+      "data_like_count": 16,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 21,
+      "folder": "paper-21-TokenRecycling",
+      "domain": "llm_nlp_reasoning",
+      "claimed_gain_str": "19.50%",
+      "py_count": 5,
+      "data_like_count": 1,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 22,
+      "folder": "paper-22-ChainOfReasoning",
+      "domain": "other_ml",
+      "claimed_gain_str": "3.38%",
+      "py_count": 21,
+      "data_like_count": 1,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 23,
+      "folder": "paper-23-GuidedEmbed",
+      "domain": "llm_nlp_reasoning",
+      "claimed_gain_str": "17.50%",
+      "py_count": 12,
+      "data_like_count": 10,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 24,
+      "folder": "paper-24-OutputCentric",
+      "domain": "other_ml",
+      "claimed_gain_str": "2.69%",
+      "py_count": 0,
+      "data_like_count": 4,
+      "gate1_risk_flags": [
+        "compute_or_ensemble_inflation"
+      ],
+      "gate1_candidate_for_gpu_audit": false
+    },
+    {
+      "id": 25,
+      "folder": "paper-25-DEEPER",
+      "domain": "other_ml",
+      "claimed_gain_str": "21.78%",
+      "py_count": 16,
+      "data_like_count": 1,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 26,
+      "folder": "paper-26-GARTKG",
+      "domain": "graph_bio_physics",
+      "claimed_gain_str": "12.40%",
+      "py_count": 19,
+      "data_like_count": 0,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 27,
+      "folder": "paper-27-CiteEval",
+      "domain": "llm_nlp_reasoning",
+      "claimed_gain_str": "24.10%",
+      "py_count": 19,
+      "data_like_count": 2,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 28,
+      "folder": "paper-28-SBAM",
+      "domain": "llm_nlp_reasoning",
+      "claimed_gain_str": "0.22%",
+      "py_count": 9,
+      "data_like_count": 3,
+      "gate1_risk_flags": [
+        "sub_0p5pct_unconfirmed_delta"
+      ],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 29,
+      "folder": "paper-29-CDQGeoEmbed",
+      "domain": "llm_nlp_reasoning",
+      "claimed_gain_str": "14%",
+      "py_count": 0,
+      "data_like_count": 2,
+      "gate1_risk_flags": [
+        "compute_or_ensemble_inflation"
+      ],
+      "gate1_candidate_for_gpu_audit": false
+    },
+    {
+      "id": 30,
+      "folder": "paper-30-ProcessRM",
+      "domain": "other_ml",
+      "claimed_gain_str": "1.12%",
+      "py_count": 5,
+      "data_like_count": 3,
+      "gate1_risk_flags": [
+        "llm_judge_or_proxy_metric"
+      ],
+      "gate1_candidate_for_gpu_audit": false
+    },
+    {
+      "id": 31,
+      "folder": "paper-31-CircuitStability",
+      "domain": "llm_nlp_reasoning",
+      "claimed_gain_str": "35.80%",
+      "py_count": 33,
+      "data_like_count": 0,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 32,
+      "folder": "paper-32-PTSolver",
+      "domain": "combinatorial_opt_rl_routing",
+      "claimed_gain_str": "4.48%",
+      "py_count": 4,
+      "data_like_count": 11,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 33,
+      "folder": "paper-33-GCSE",
+      "domain": "llm_nlp_reasoning",
+      "claimed_gain_str": "2.81%",
+      "py_count": 49,
+      "data_like_count": 5,
+      "gate1_risk_flags": [
+        "compute_or_ensemble_inflation"
+      ],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 34,
+      "folder": "paper-34-EnsembleWM",
+      "domain": "llm_nlp_reasoning",
+      "claimed_gain_str": "3.46%",
+      "py_count": 14,
+      "data_like_count": 33,
+      "gate1_risk_flags": [
+        "compute_or_ensemble_inflation"
+      ],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 35,
+      "folder": "paper-35-MoralValuesWA",
+      "domain": "graph_bio_physics",
+      "claimed_gain_str": "8.59%",
+      "py_count": 5,
+      "data_like_count": 1,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 36,
+      "folder": "paper-36-WeakStrongPref",
+      "domain": "other_ml",
+      "claimed_gain_str": "28.42%",
+      "py_count": 8,
+      "data_like_count": 1,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 37,
+      "folder": "paper-37-DementiaMask",
+      "domain": "vision_multimodal_audio",
+      "claimed_gain_str": "2.45%",
+      "py_count": 30,
+      "data_like_count": 0,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 38,
+      "folder": "paper-38-TinySAM",
+      "domain": "vision_multimodal_audio",
+      "claimed_gain_str": "0.90%",
+      "py_count": 22,
+      "data_like_count": 4,
+      "gate1_risk_flags": [
+        "tta_or_test_resolution"
+      ],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 39,
+      "folder": "paper-39-CALF",
+      "domain": "time_series",
+      "claimed_gain_str": "0.19%",
+      "py_count": 22,
+      "data_like_count": 1,
+      "gate1_risk_flags": [
+        "sub_0p5pct_unconfirmed_delta"
+      ],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 40,
+      "folder": "paper-40-GraniteGuardian",
+      "domain": "llm_nlp_reasoning",
+      "claimed_gain_str": "1.37%",
+      "py_count": 0,
+      "data_like_count": 0,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": false
+    },
+    {
+      "id": 41,
+      "folder": "paper-41-AMDM",
+      "domain": "time_series",
+      "claimed_gain_str": "1.07%",
+      "py_count": 17,
+      "data_like_count": 3,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 42,
+      "folder": "paper-42-xPatch",
+      "domain": "time_series",
+      "claimed_gain_str": "6.92%",
+      "py_count": 146,
+      "data_like_count": 0,
+      "gate1_risk_flags": [
+        "lookback_or_split_override"
+      ],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 43,
+      "folder": "paper-43-VHM",
+      "domain": "llm_nlp_reasoning",
+      "claimed_gain_str": "0.67%",
+      "py_count": 22,
+      "data_like_count": 4,
+      "gate1_risk_flags": [
+        "tta_or_test_resolution"
+      ],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 44,
+      "folder": "paper-44-RGVI",
+      "domain": "vision_multimodal_audio",
+      "claimed_gain_str": "3.40%",
+      "py_count": 7,
+      "data_like_count": 1,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 45,
+      "folder": "paper-45-PsLSTM",
+      "domain": "time_series",
+      "claimed_gain_str": "0.86%",
+      "py_count": 49,
+      "data_like_count": 2,
+      "gate1_risk_flags": [
+        "compute_or_ensemble_inflation"
+      ],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 46,
+      "folder": "paper-46-NonStatTS",
+      "domain": "time_series",
+      "claimed_gain_str": "2.27%",
+      "py_count": 51,
+      "data_like_count": 0,
+      "gate1_risk_flags": [
+        "tta_or_test_resolution"
+      ],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 47,
+      "folder": "paper-47-TimePFN",
+      "domain": "time_series",
+      "claimed_gain_str": "8.77%",
+      "py_count": 21,
+      "data_like_count": 2,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 48,
+      "folder": "paper-48-Shapiq",
+      "domain": "other_ml",
+      "claimed_gain_str": "30.30%",
+      "py_count": 300,
+      "data_like_count": 2180,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": false
+    },
+    {
+      "id": 49,
+      "folder": "paper-49-HogwildInference",
+      "domain": "time_series",
+      "claimed_gain_str": "4%",
+      "py_count": 40,
+      "data_like_count": 6,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 50,
+      "folder": "paper-50-CausalPFN",
+      "domain": "conformal_dp_stats_causal",
+      "claimed_gain_str": "15.86%",
+      "py_count": 45,
+      "data_like_count": 203,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 51,
+      "folder": "paper-51-FlashTP",
+      "domain": "graph_bio_physics",
+      "claimed_gain_str": "0.70%",
+      "py_count": 15,
+      "data_like_count": 13,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 52,
+      "folder": "paper-52-NsDiff",
+      "domain": "time_series",
+      "claimed_gain_str": "1.28%",
+      "py_count": 0,
+      "data_like_count": 1,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": false
+    },
+    {
+      "id": 53,
+      "folder": "paper-53-K2VAE",
+      "domain": "time_series",
+      "claimed_gain_str": "1.52%",
+      "py_count": 96,
+      "data_like_count": 0,
+      "gate1_risk_flags": [
+        "tta_or_test_resolution"
+      ],
+      "gate1_candidate_for_gpu_audit": false
+    },
+    {
+      "id": 54,
+      "folder": "paper-54-TimeBase",
+      "domain": "time_series",
+      "claimed_gain_str": "0.36%",
+      "py_count": 65,
+      "data_like_count": 1,
+      "gate1_risk_flags": [
+        "sub_0p5pct_unconfirmed_delta"
+      ],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 55,
+      "folder": "paper-55-CSBrain",
+      "domain": "vision_multimodal_audio",
+      "claimed_gain_str": "6.25%",
+      "py_count": 35,
+      "data_like_count": 0,
+      "gate1_risk_flags": [
+        "tta_or_test_resolution",
+        "compute_or_ensemble_inflation"
+      ],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 56,
+      "folder": "paper-56-InfoSAM",
+      "domain": "vision_multimodal_audio",
+      "claimed_gain_str": "1.60%",
+      "py_count": 0,
+      "data_like_count": 0,
+      "gate1_risk_flags": [
+        "tta_or_test_resolution"
+      ],
+      "gate1_candidate_for_gpu_audit": false
+    },
+    {
+      "id": 57,
+      "folder": "paper-57-MDReID",
+      "domain": "other_ml",
+      "claimed_gain_str": "14%",
+      "py_count": 81,
+      "data_like_count": 1,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 58,
+      "folder": "paper-58-MindGlitch",
+      "domain": "vision_multimodal_audio",
+      "claimed_gain_str": "1.80%",
+      "py_count": 32,
+      "data_like_count": 3,
+      "gate1_risk_flags": [
+        "tta_or_test_resolution"
+      ],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 59,
+      "folder": "paper-59-SelfSupervised",
+      "domain": "time_series",
+      "claimed_gain_str": "0.30%",
+      "py_count": 47,
+      "data_like_count": 0,
+      "gate1_risk_flags": [
+        "compute_or_ensemble_inflation",
+        "sub_0p5pct_unconfirmed_delta"
+      ],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 60,
+      "folder": "paper-60-IAGGAD",
+      "domain": "vision_multimodal_audio",
+      "claimed_gain_str": "1.83%",
+      "py_count": 5,
+      "data_like_count": 2,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 61,
+      "folder": "paper-61-HSGKN",
+      "domain": "conformal_dp_stats_causal",
+      "claimed_gain_str": "2.20%",
+      "py_count": 6,
+      "data_like_count": 5,
+      "gate1_risk_flags": [
+        "compute_or_ensemble_inflation"
+      ],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 62,
+      "folder": "paper-62-VisionTS",
+      "domain": "time_series",
+      "claimed_gain_str": "0.80%",
+      "py_count": 41,
+      "data_like_count": 4,
+      "gate1_risk_flags": [
+        "compute_or_ensemble_inflation"
+      ],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 63,
+      "folder": "paper-63-TSRAG",
+      "domain": "time_series",
+      "claimed_gain_str": "13.90%",
+      "py_count": 13,
+      "data_like_count": 1,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 64,
+      "folder": "paper-64-PIR",
+      "domain": "time_series",
+      "claimed_gain_str": "10.60%",
+      "py_count": 50,
+      "data_like_count": 0,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 65,
+      "folder": "paper-65-ProteinBinding",
+      "domain": "graph_bio_physics",
+      "claimed_gain_str": "15.48%",
+      "py_count": 10,
+      "data_like_count": 8,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 66,
+      "folder": "paper-66-TropicalAttention",
+      "domain": "combinatorial_opt_rl_routing",
+      "claimed_gain_str": "15.55%",
+      "py_count": 6,
+      "data_like_count": 21,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 67,
+      "folder": "paper-67-KAN-AD",
+      "domain": "time_series",
+      "claimed_gain_str": "0.89%",
+      "py_count": 0,
+      "data_like_count": 0,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": false
+    },
+    {
+      "id": 68,
+      "folder": "paper-68-SEMPO",
+      "domain": "time_series",
+      "claimed_gain_str": "0.12%",
+      "py_count": 16,
+      "data_like_count": 2,
+      "gate1_risk_flags": [
+        "tiny_gain_within_seed_noise"
+      ],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 69,
+      "folder": "paper-69-TreeHFD",
+      "domain": "other_ml",
+      "claimed_gain_str": "36.60%",
+      "py_count": 20,
+      "data_like_count": 15,
+      "gate1_risk_flags": [
+        "compute_or_ensemble_inflation"
+      ],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 70,
+      "folder": "paper-70-CertifiedUnlearning",
+      "domain": "other_ml",
+      "claimed_gain_str": "63.64%",
+      "py_count": 8,
+      "data_like_count": 2,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": false
+    },
+    {
+      "id": 71,
+      "folder": "paper-71-NeuralMJD",
+      "domain": "time_series",
+      "claimed_gain_str": "19%",
+      "py_count": 18,
+      "data_like_count": 1,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 72,
+      "folder": "paper-72-FedGMT",
+      "domain": "other_ml",
+      "claimed_gain_str": "4.37%",
+      "py_count": 30,
+      "data_like_count": 0,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 73,
+      "folder": "paper-73-RLD",
+      "domain": "combinatorial_opt_rl_routing",
+      "claimed_gain_str": "0.24%",
+      "py_count": 11,
+      "data_like_count": 0,
+      "gate1_risk_flags": [
+        "sub_0p5pct_unconfirmed_delta"
+      ],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 74,
+      "folder": "paper-74-LSVI",
+      "domain": "conformal_dp_stats_causal",
+      "claimed_gain_str": "0.02%",
+      "py_count": 13,
+      "data_like_count": 0,
+      "gate1_risk_flags": [
+        "sub_0p5pct_unconfirmed_delta"
+      ],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 75,
+      "folder": "paper-75-TreeSlicedEntropy",
+      "domain": "other_ml",
+      "claimed_gain_str": "0.50%",
+      "py_count": 63,
+      "data_like_count": 11,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 76,
+      "folder": "paper-76-AANet",
+      "domain": "other_ml",
+      "claimed_gain_str": "6.79%",
+      "py_count": 0,
+      "data_like_count": 1,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": false
+    },
+    {
+      "id": 77,
+      "folder": "paper-77-CMNN",
+      "domain": "other_ml",
+      "claimed_gain_str": "0.30%",
+      "py_count": 1,
+      "data_like_count": 8,
+      "gate1_risk_flags": [
+        "compute_or_ensemble_inflation",
+        "sub_0p5pct_unconfirmed_delta"
+      ],
+      "gate1_candidate_for_gpu_audit": false
+    },
+    {
+      "id": 78,
+      "folder": "paper-78-ConformalAnomaly",
+      "domain": "conformal_dp_stats_causal",
+      "claimed_gain_str": "0.11%",
+      "py_count": 23,
+      "data_like_count": 0,
+      "gate1_risk_flags": [
+        "tiny_gain_within_seed_noise"
+      ],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 79,
+      "folder": "paper-79-DPFKMeans",
+      "domain": "conformal_dp_stats_causal",
+      "claimed_gain_str": "2.01%",
+      "py_count": 24,
+      "data_like_count": 5,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 80,
+      "folder": "paper-80-LatentScoreReweight",
+      "domain": "other_ml",
+      "claimed_gain_str": "6.58%",
+      "py_count": 37,
+      "data_like_count": 49,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 81,
+      "folder": "paper-81-QMamba",
+      "domain": "time_series",
+      "claimed_gain_str": "1.01%",
+      "py_count": 12,
+      "data_like_count": 2,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 82,
+      "folder": "paper-82-OnlineLLMRouting",
+      "domain": "conformal_dp_stats_causal",
+      "claimed_gain_str": "1.61%",
+      "py_count": 6,
+      "data_like_count": 3,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 83,
+      "folder": "paper-83-STaRFormer",
+      "domain": "other_ml",
+      "claimed_gain_str": "3.15%",
+      "py_count": 121,
+      "data_like_count": 1,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": false
+    },
+    {
+      "id": 84,
+      "folder": "paper-84-IFT",
+      "domain": "time_series",
+      "claimed_gain_str": "2.30%",
+      "py_count": 44,
+      "data_like_count": 2,
+      "gate1_risk_flags": [
+        "compute_or_ensemble_inflation"
+      ],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 85,
+      "folder": "paper-85-NeuralSurv",
+      "domain": "conformal_dp_stats_causal",
+      "claimed_gain_str": "23%",
+      "py_count": 60,
+      "data_like_count": 3,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 86,
+      "folder": "paper-86-STELLA",
+      "domain": "time_series",
+      "claimed_gain_str": "2.42%",
+      "py_count": 177,
+      "data_like_count": 9,
+      "gate1_risk_flags": [
+        "compute_or_ensemble_inflation"
+      ],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 87,
+      "folder": "paper-87-MoSES",
+      "domain": "combinatorial_opt_rl_routing",
+      "claimed_gain_str": "51.40%",
+      "py_count": 31,
+      "data_like_count": 77,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": false
+    },
+    {
+      "id": 88,
+      "folder": "paper-88-ChannelNorm",
+      "domain": "time_series",
+      "claimed_gain_str": "15.20%",
+      "py_count": 31,
+      "data_like_count": 1,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 89,
+      "folder": "paper-89-CausalVelocity",
+      "domain": "conformal_dp_stats_causal",
+      "claimed_gain_str": "1.66%",
+      "py_count": 27,
+      "data_like_count": 3,
+      "gate1_risk_flags": [
+        "compute_or_ensemble_inflation"
+      ],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 90,
+      "folder": "paper-90-RSTIB",
+      "domain": "time_series",
+      "claimed_gain_str": "0.38%",
+      "py_count": 18,
+      "data_like_count": 3,
+      "gate1_risk_flags": [
+        "sub_0p5pct_unconfirmed_delta"
+      ],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 91,
+      "folder": "paper-91-TimeAwareCausal",
+      "domain": "conformal_dp_stats_causal",
+      "claimed_gain_str": "4.30%",
+      "py_count": 28,
+      "data_like_count": 27,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 92,
+      "folder": "paper-92-KmeansLocalOpt",
+      "domain": "conformal_dp_stats_causal",
+      "claimed_gain_str": "0.84%",
+      "py_count": 2,
+      "data_like_count": 0,
+      "gate1_risk_flags": [
+        "compute_or_ensemble_inflation"
+      ],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 93,
+      "folder": "paper-93-FedWMSAM",
+      "domain": "other_ml",
+      "claimed_gain_str": "1.77%",
+      "py_count": 45,
+      "data_like_count": 3,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 94,
+      "folder": "paper-94-BounDrE",
+      "domain": "vision_multimodal_audio",
+      "claimed_gain_str": "1.27%",
+      "py_count": 6,
+      "data_like_count": 16,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 95,
+      "folder": "paper-95-FastFeatureCP",
+      "domain": "conformal_dp_stats_causal",
+      "claimed_gain_str": "5.49%",
+      "py_count": 27,
+      "data_like_count": 22,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 96,
+      "folder": "paper-96-M3SVM",
+      "domain": "conformal_dp_stats_causal",
+      "claimed_gain_str": "2.37%",
+      "py_count": 10,
+      "data_like_count": 1,
+      "gate1_risk_flags": [
+        "compute_or_ensemble_inflation"
+      ],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 97,
+      "folder": "paper-97-WassersteinTL",
+      "domain": "conformal_dp_stats_causal",
+      "claimed_gain_str": "3.74%",
+      "py_count": 0,
+      "data_like_count": 0,
+      "gate1_risk_flags": [
+        "compute_or_ensemble_inflation"
+      ],
+      "gate1_candidate_for_gpu_audit": false
+    },
+    {
+      "id": 98,
+      "folder": "paper-98-XMahalanobis",
+      "domain": "conformal_dp_stats_causal",
+      "claimed_gain_str": "1.07%",
+      "py_count": 14,
+      "data_like_count": 0,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 99,
+      "folder": "paper-99-OLLALanding",
+      "domain": "other_ml",
+      "claimed_gain_str": "4.83%",
+      "py_count": 16,
+      "data_like_count": 1,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 100,
+      "folder": "paper-100-InvMissingData",
+      "domain": "conformal_dp_stats_causal",
+      "claimed_gain_str": "2.50%",
+      "py_count": 31,
+      "data_like_count": 24,
+      "gate1_risk_flags": [
+        "compute_or_ensemble_inflation"
+      ],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 101,
+      "folder": "paper-101-ACIA",
+      "domain": "conformal_dp_stats_causal",
+      "claimed_gain_str": "0.57%",
+      "py_count": 23,
+      "data_like_count": 3,
+      "gate1_risk_flags": [
+        "compute_or_ensemble_inflation"
+      ],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 102,
+      "folder": "paper-102-StochasticFF",
+      "domain": "other_ml",
+      "claimed_gain_str": "1.33%",
+      "py_count": 9,
+      "data_like_count": 1,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 103,
+      "folder": "paper-103-QDCP",
+      "domain": "conformal_dp_stats_causal",
+      "claimed_gain_str": "6.33%",
+      "py_count": 12,
+      "data_like_count": 1,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 104,
+      "folder": "paper-104-BalancedActiveInf",
+      "domain": "conformal_dp_stats_causal",
+      "claimed_gain_str": "24.80%",
+      "py_count": 8,
+      "data_like_count": 1,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    },
+    {
+      "id": 105,
+      "folder": "paper-105-BinaryClassEval",
+      "domain": "conformal_dp_stats_causal",
+      "claimed_gain_str": "2.40%",
+      "py_count": 37,
+      "data_like_count": 1,
+      "gate1_risk_flags": [],
+      "gate1_candidate_for_gpu_audit": true
+    }
+  ]
+}
