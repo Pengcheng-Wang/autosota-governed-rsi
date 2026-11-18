@@ -1,0 +1,147 @@
+{
+  "benchmark": "C4_Paper79_DPFKMeans_LockedDGP_v35",
+  "best_candidate": "c4_cand_02_bayesian_james_stein_residual_dp",
+  "confirm_verdicts": {
+    "dp_fedkmeans_autosota_locked_dgp": {
+      "cand": 29.06600161286238,
+      "decision": "PROMOTE",
+      "gain": 108.20195995187913,
+      "lcb": 84.74967052199504,
+      "ref": 137.2679615647415,
+      "signflip_p": 0.000244140625,
+      "tripwires": []
+    },
+    "dp_fedkmeans_paper": {
+      "cand": 29.06600161286238,
+      "decision": "PROMOTE",
+      "gain": 1.3056314065983337,
+      "lcb": 0.7906303729079696,
+      "ref": 30.371633019460713,
+      "signflip_p": 0.000244140625,
+      "tripwires": []
+    },
+    "server_only_kmeanspp": {
+      "cand": 29.06600161286238,
+      "decision": "PROMOTE",
+      "gain": 2.06457669974408,
+      "lcb": 1.3168977289207078,
+      "ref": 31.13057831260646,
+      "signflip_p": 0.000244140625,
+      "tripwires": []
+    }
+  },
+  "dgp_tamper_audit": {
+    "autosota_tampered_variance_0p49_oracle_floor": 9.739666707019817,
+    "intrinsic_cost_drop_from_dgp_tamper_pct": 50.93821462077805,
+    "locked_variance_1p0_oracle_floor": 19.85183912843221
+  },
+  "holdout_finalized": {
+    "comparisons": {
+      "dp_fedkmeans_autosota_locked_dgp": {
+        "bootstrap_mode": "crossed_seed_cluster",
+        "ci95_high": 126.78108749846838,
+        "ci95_low": 88.13465393562721,
+        "distinct_cluster_deltas": 12,
+        "insufficient_replication": false,
+        "lcb_one_sided": 88.13465393562721,
+        "low_cluster_warning": false,
+        "n_clusters": 12,
+        "n_items": 60,
+        "n_positive_clusters": 12,
+        "n_seeds": 5,
+        "n_strata": 12,
+        "obs_candidate": 33.46755504425784,
+        "obs_reference": 141.13048304901477,
+        "se": 10.024573035056193,
+        "signed_gain": 107.66292800475694,
+        "signflip_method": "exact",
+        "signflip_p_one_sided": 0.000244140625,
+        "statistic": "mean",
+        "weighting": "equal_stratum"
+      },
+      "dp_fedkmeans_paper": {
+        "bootstrap_mode": "crossed_seed_cluster",
+        "ci95_high": 2.0858211947518086,
+        "ci95_low": 0.8899134274393568,
+        "distinct_cluster_deltas": 12,
+        "insufficient_replication": false,
+        "lcb_one_sided": 0.8899134274393568,
+        "low_cluster_warning": false,
+        "n_clusters": 12,
+        "n_items": 60,
+        "n_positive_clusters": 12,
+        "n_seeds": 5,
+        "n_strata": 12,
+        "obs_candidate": 33.46755504425784,
+        "obs_reference": 34.90215795702654,
+        "se": 0.3053775764724213,
+        "signed_gain": 1.4346029127686961,
+        "signflip_method": "exact",
+        "signflip_p_one_sided": 0.000244140625,
+        "statistic": "mean",
+        "weighting": "equal_stratum"
+      },
+      "server_only_kmeanspp": {
+        "bootstrap_mode": "crossed_seed_cluster",
+        "ci95_high": 3.0998959259128895,
+        "ci95_low": 1.7553763209650022,
+        "distinct_cluster_deltas": 12,
+        "insufficient_replication": false,
+        "lcb_one_sided": 1.7553763209650022,
+        "low_cluster_warning": false,
+        "n_clusters": 12,
+        "n_items": 60,
+        "n_positive_clusters": 12,
+        "n_seeds": 5,
+        "n_strata": 12,
+        "obs_candidate": 33.46755504425784,
+        "obs_reference": 35.82318955372872,
+        "se": 0.34111640832414514,
+        "signed_gain": 2.3556345094708746,
+        "signflip_method": "exact",
+        "signflip_p_one_sided": 0.000244140625,
+        "statistic": "mean",
+        "weighting": "equal_stratum"
+      }
+    },
+    "holdout_guardrails_passed": true,
+    "holdout_seal_sha256": "37bda0030babb313e984fce67ae91a78b0ca7fba92fa6dd0d6eeb7dcd0053b2a",
+    "holdout_tripwires": [],
+    "ledger_entry_sha256": "359518041c6b263a0f208b414b327206bcce1e2ca6ff6151bf9d5487d628396c",
+    "seal_file": "/scratch/autosota_governed_v3/seals/HOLDOUT_SEAL_c4.json",
+    "status": "FINALIZED"
+  },
+  "holdout_reserve": {
+    "candidate_artifact_sha256": "635b3d2a790e6ceefaa5244582b220dcd7e254f266e02421b4d4fd7a07dde05e",
+    "candidate_id": "c4_cand_02_bayesian_james_stein_residual_dp",
+    "ledger_head_at_reserve_sha256": "5968ca4c800b3c4fb36829c6f38cfef9d9adf3517602dc669baee63630b091c5",
+    "manifest_root_sha256": "fc54de7df9f14a5c2ede28312463d6ea41862eea28e979defaba9c1812389962",
+    "required_comparators_verified": [
+      "dp_fedkmeans_paper",
+      "dp_fedkmeans_autosota_locked_dgp",
+      "server_only_kmeanspp"
+    ],
+    "reserved_at_utc": "2026-11-18T03:12:04.650092+00:00",
+    "rules_sha256": "bb81968bdea0b4a863c413c05c8183e25b30da444b41337947ec58614ce1007a",
+    "schema_version": "3.0",
+    "seal_file": "/scratch/autosota_governed_v3/seals/HOLDOUT_SEAL_c4.json",
+    "status": "RESERVED"
+  },
+  "ledger_verification": {
+    "entries": 6,
+    "head_sha256": "359518041c6b263a0f208b414b327206bcce1e2ca6ff6151bf9d5487d628396c",
+    "status": "VERIFIED"
+  },
+  "search_scores": {
+    "c4_cand_01_residual_centered_clipping": {
+      "eval_wall_clock_sec": 12.244003098923713,
+      "kmeans_cost_test": 29.121600674847393,
+      "max_eps_spent": 4.0
+    },
+    "c4_cand_02_bayesian_james_stein_residual_dp": {
+      "eval_wall_clock_sec": 12.234811509028077,
+      "kmeans_cost_test": 29.080309658456752,
+      "max_eps_spent": 4.0
+    }
+  }
+}

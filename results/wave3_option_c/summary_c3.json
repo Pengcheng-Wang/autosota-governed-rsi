@@ -1,0 +1,68 @@
+{
+  "autosota_test_epoch_peeking_audit": {
+    "artificial_peeking_gain_1500ep_pp": 7.600000000000007,
+    "artificial_peeking_gain_500ep_pp": 6.599999999999994,
+    "evaluated_on": "IMDB_BINARY_train_pool_only_500_graphs",
+    "honest_inner_val_1500ep": 0.6759999999999999,
+    "honest_inner_val_500ep": 0.6799999999999999,
+    "peek_test_max_1500ep": 0.752,
+    "peek_test_max_500ep": 0.7459999999999999
+  },
+  "benchmark": "C3_Paper61_HSGKN_GraphClassification_v35",
+  "best_candidate": "c3_cand_02_hellinger_kernel_hsgkn_blend",
+  "confirm_verdicts": {
+    "hsgkn_autosota_se_honest": {
+      "cand": 0.5767265291607397,
+      "decision": "ROLLBACK",
+      "gain": 0.0025597439544808864,
+      "lcb": -0.04601011537853639,
+      "ref": 0.5741667852062589,
+      "signflip_p": 1.0,
+      "tripwires": []
+    },
+    "hsgkn_paper_honest": {
+      "cand": 0.5767265291607397,
+      "decision": "ROLLBACK",
+      "gain": 0.019078947368421084,
+      "lcb": -0.04870128022759601,
+      "ref": 0.5576475817923187,
+      "signflip_p": 0.3085784912109375,
+      "tripwires": []
+    },
+    "sp_graph_kernel_svm": {
+      "cand": 0.5767265291607397,
+      "decision": "ROLLBACK",
+      "gain": 0.0034210526315789913,
+      "lcb": -0.028057847321005247,
+      "ref": 0.5733054765291608,
+      "signflip_p": 1.0,
+      "tripwires": []
+    }
+  },
+  "holdout_finalized": null,
+  "holdout_reserve": {
+    "artifact_sha_mismatches": [],
+    "candidate_id": "c3_cand_02_hellinger_kernel_hsgkn_blend",
+    "missing_or_failed_comparators": [
+      "hsgkn_paper_honest:ROLLBACK",
+      "hsgkn_autosota_se_honest:ROLLBACK",
+      "sp_graph_kernel_svm:ROLLBACK"
+    ],
+    "status": "BLOCKED_NOT_CONFIRMED"
+  },
+  "ledger_verification": {
+    "entries": 5,
+    "head_sha256": "7cc4b9118b95eb48760503024705d1a39e0d2d3cb1e03c53445b3d562156134e",
+    "status": "VERIFIED"
+  },
+  "search_scores": {
+    "c3_cand_01_log1p_hsgkn_cosine": {
+      "eval_wall_clock_sec": 5.19513134798035,
+      "graph_acc": 0.6068160265528687
+    },
+    "c3_cand_02_hellinger_kernel_hsgkn_blend": {
+      "eval_wall_clock_sec": 8.344329505925998,
+      "graph_acc": 0.616364390706496
+    }
+  }
+}

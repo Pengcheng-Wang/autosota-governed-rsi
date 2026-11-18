@@ -1,0 +1,80 @@
+{
+  "benchmark": "C1_Paper10_SuitabilityFilter_WILDS_v35",
+  "best_candidate": "c1_cand_01_oof_isotonic_logit_blend",
+  "confirm_verdicts": {
+    "equal_compute_calibrated_gbdt": {
+      "cand": 0.034809550935609,
+      "decision": "ROLLBACK",
+      "gain": -0.00012635634474342933,
+      "lcb": -0.001475503385495569,
+      "ref": 0.03468319459086557,
+      "signflip_p": 1.0,
+      "tripwires": [
+        "baseline_ratio_too_high:eval_wall_clock_sec_ratio=10.3437>2.5"
+      ]
+    },
+    "sf_autosota_10fold": {
+      "cand": 0.034809550935609,
+      "decision": "ROLLBACK",
+      "gain": -5.1334811128546376e-05,
+      "lcb": -0.0017109807277412743,
+      "ref": 0.034758216124480455,
+      "signflip_p": 1.0,
+      "tripwires": [
+        "baseline_ratio_too_high:eval_wall_clock_sec_ratio=10.3437>2.5"
+      ]
+    },
+    "sf_paper_base": {
+      "cand": 0.034809550935609,
+      "decision": "ROLLBACK",
+      "gain": 0.0009936653829804298,
+      "lcb": -3.689143589283295e-05,
+      "ref": 0.03580321631858943,
+      "signflip_p": 0.132568359375,
+      "tripwires": [
+        "baseline_ratio_too_high:eval_wall_clock_sec_ratio=10.3437>2.5"
+      ]
+    }
+  },
+  "holdout_finalized": null,
+  "holdout_reserve": {
+    "artifact_sha_mismatches": [],
+    "candidate_id": "c1_cand_01_oof_isotonic_logit_blend",
+    "missing_or_failed_comparators": [
+      "sf_paper_base:ROLLBACK",
+      "sf_autosota_10fold:ROLLBACK",
+      "equal_compute_calibrated_gbdt:ROLLBACK"
+    ],
+    "status": "BLOCKED_NOT_CONFIRMED"
+  },
+  "ledger_verification": {
+    "entries": 6,
+    "head_sha256": "334f3aa306ac22f0fdf932d5bb7b0dc8377aabace9ba303a1388d5aab212c255",
+    "status": "VERIFIED"
+  },
+  "protocol_confound_audit": {
+    "fmow_source_fold_acc_std_10fold": 0.011300229587221374,
+    "fmow_source_fold_acc_std_5fold": 0.008150070829767304,
+    "issue": "AutoSOTA mutated num_folds=5->10 inside the evaluation loop where ground_truth=(user_acc >= fold_j_acc), doubling eval rows and inflating fold_j_acc noise by sqrt(2)."
+  },
+  "search_scores": {
+    "c1_cand_01_oof_isotonic_logit_blend": {
+      "acc_est_mae": 0.03406916340539354,
+      "eval_wall_clock_sec": 3.338050924008712,
+      "n_auroc_groups": 6,
+      "suitability_auroc": 1.0
+    },
+    "c1_cand_02_density_ratio_reweighted": {
+      "acc_est_mae": 0.035185952081117515,
+      "eval_wall_clock_sec": 1.3295892421156168,
+      "n_auroc_groups": 6,
+      "suitability_auroc": 1.0
+    },
+    "c1_cand_03_shift_penalized_ood_calibrator": {
+      "acc_est_mae": 0.034485952943665014,
+      "eval_wall_clock_sec": 2.9942017670255154,
+      "n_auroc_groups": 6,
+      "suitability_auroc": 1.0
+    }
+  }
+}

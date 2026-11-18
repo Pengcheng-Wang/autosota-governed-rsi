@@ -1,0 +1,71 @@
+{
+  "autosota_np8_runtime_audit": {
+    "gate_decision": "ROLLBACK",
+    "np2_metrics": {
+      "eval_wall_clock_sec": 57.578730776993325,
+      "impute_mae": 2372.317546911009
+    },
+    "np8_metrics": {
+      "eval_wall_clock_sec": 210.8328439159959,
+      "impute_mae": 2372.305077280395
+    },
+    "tripwires": [
+      "baseline_ratio_too_high:eval_wall_clock_sec_ratio=3.6616>1.6"
+    ]
+  },
+  "benchmark": "C5_Paper100_InvMissingData_16UCI_v35",
+  "best_candidate": "c5_cand_02_masked_cv_mice_knn_ot_synthesis",
+  "confirm_verdicts": {
+    "iterative_ridge_mice": {
+      "cand": 730.9491895491172,
+      "decision": "PROMOTE",
+      "gain": 0.06426504132036825,
+      "lcb": 0.03798432960775244,
+      "ref": 731.0134545904376,
+      "signflip_p": 0.000244140625,
+      "tripwires": []
+    },
+    "knn_distance_base": {
+      "cand": 730.9491895491172,
+      "decision": "ROLLBACK",
+      "gain": 0.045574356298971,
+      "lcb": 0.0016695129156687472,
+      "ref": 730.9947639054162,
+      "signflip_p": 0.0228271484375,
+      "tripwires": []
+    },
+    "ot_sinkhorn_paper_np2": {
+      "cand": 730.9491895491172,
+      "decision": "PROMOTE",
+      "gain": 0.06893498601516512,
+      "lcb": 0.018224629721430574,
+      "ref": 731.0181245351324,
+      "signflip_p": 0.00384521484375,
+      "tripwires": []
+    }
+  },
+  "holdout_finalized": null,
+  "holdout_reserve": {
+    "artifact_sha_mismatches": [],
+    "candidate_id": "c5_cand_02_masked_cv_mice_knn_ot_synthesis",
+    "missing_or_failed_comparators": [
+      "knn_distance_base:ROLLBACK"
+    ],
+    "status": "BLOCKED_NOT_CONFIRMED"
+  },
+  "ledger_verification": {
+    "entries": 5,
+    "head_sha256": "6897f43ac6ba64c74d9d71f247eb021fd448caa575315c9a61b2b52a6c0d8e40",
+    "status": "VERIFIED"
+  },
+  "search_scores": {
+    "c5_cand_01_ridge_warm_ot": {
+      "eval_wall_clock_sec": 57.071422914013965,
+      "impute_mae": 2372.287668813589
+    },
+    "c5_cand_02_masked_cv_mice_knn_ot_synthesis": {
+      "eval_wall_clock_sec": 79.28583459198126,
+      "impute_mae": 2372.2689345980266
+    }
+  }
+}

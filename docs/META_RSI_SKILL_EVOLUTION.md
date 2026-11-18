@@ -1,6 +1,6 @@
-# Iterative Meta-RSI Evolution of `/governed-loop-optimization` (`v2.0 -> v3.5`)
+# Iterative Meta-RSI Evolution of `/governed-loop-optimization` (`v2.0 -> v3.6`)
 
-This document traces how live multi-benchmark execution across `AutoSOTA` and adversarial Frontier Cowork reviews (`Opus 5.5, Max` and `GPT 6.2 Astra / GPT 6 Astra, Max`) iteratively hardened `scripts/governed_loop_guard.py` (`18/18` regression & fault-injection tests passing).
+This document traces how live multi-benchmark execution across `AutoSOTA` and adversarial Frontier Cowork / `rubber-duck` reviews (`Opus 5.5, Max`, `GPT 6.2 Astra / GPT 6 Astra, Max`) iteratively hardened `scripts/governed_loop_guard.py` (`19/19` regression & fault-injection tests passing).
 
 ---
 
@@ -16,3 +16,4 @@ This document traces how live multi-benchmark execution across `AutoSOTA` and ad
 | **`v3.3`** | `Opus 5.5, Max` Pre-Release Audit | Small-cluster (`G < 20`) percentile bootstrap under-coverage; mid-campaign Confirm rule edits; Search continuing after `K` Confirm looks spent; Confirm tripwire leakage | Paired cluster Rademacher sign-flip gate (`2^-G <= eff_alpha`), `rules_sha256` pinning across Confirm looks, terminal `halt_recommended=true` at `K` looks, strict `--proposer-out` Confirm redaction | `test_15`, `test_16` |
 | **`v3.4`** | Live Wave-2 `B5` (`TreeHFD`) | Unstable paper baseline (`depth=6` MSE `60+` on 1 seed) created right-skewed positive gains where `mean - z * stdev < 0` despite `8/8` positive clusters and `boot_lcb = +2.17` | Use percentile-bootstrap LCB directly rather than capping by symmetric `mean - z * stdev` | `test_17` |
 | **`v3.5`** | `GPT 6 Astra, Max` Sign-Off Audit | `G=16` (`B1`) used `8,000`-draw MC (`0.000125`) instead of exact `2^16 = 65,536` (`1.53e-5`); sign-flip tested `0` margin instead of `min_improvement`; external `aa_noise_se` subtracted post-hoc | Exhaustive `2^G` sign-flip up to `G <= 16` + `signflip_method`; shift cluster deltas by `min_improvement`; convolve external Gaussian noise jointly inside each bootstrap replicate | `test_18` |
+| **`v3.6`** | Wave-3 Pre-Seal Adversarial Audit (`C4` DP / `C6` Conformal) | A candidate passing `per_stratum_hard_floors/ceilings` on Confirm could still breach DP $\varepsilon$ or conformal coverage on unseen Holdout strata if `gate-holdout --phase finalize` only computed primary CIs | Enforce `hard_floors`, `hard_ceilings`, `per_stratum_hard_floors`, and `per_stratum_hard_ceilings` directly inside `gate-holdout --phase finalize` (`holdout_guardrails_passed` + `holdout_tripwires`, exiting non-zero while recording `FINALIZED_GUARDRAIL_VIOLATION` in the write-once seal) | `test_19` |

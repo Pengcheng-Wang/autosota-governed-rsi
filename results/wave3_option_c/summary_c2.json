@@ -1,0 +1,76 @@
+{
+  "autosota_42x_runtime_audit": {
+    "autosota_42x_search": {
+      "eval_wall_clock_sec": 273.5937182898633,
+      "sqrt_pehe": 1.4896789978254419
+    },
+    "base_search": {
+      "eval_wall_clock_sec": 14.178427431965247,
+      "sqrt_pehe": 1.934091737445194
+    },
+    "gate_decision": "ROLLBACK",
+    "tripwires": [
+      "baseline_ratio_too_high:eval_wall_clock_sec_ratio=19.2965>2.0"
+    ]
+  },
+  "benchmark": "C2_Paper50_CausalPFN_IHDP100_v35",
+  "best_candidate": "c2_cand_02_loo_mkl_tar_synthesis",
+  "confirm_verdicts": {
+    "dr_learner_base": {
+      "cand": 1.5593996619509418,
+      "decision": "ROLLBACK",
+      "gain": 0.5993938714869234,
+      "lcb": 0.12242127348929754,
+      "ref": 2.158793533437865,
+      "tripwires": [
+        "baseline_ratio_too_high:eval_wall_clock_sec_ratio=2.6155>2.0"
+      ]
+    },
+    "equal_compute_t_ens": {
+      "cand": 1.5593996619509418,
+      "decision": "ROLLBACK",
+      "gain": 0.1535172461978629,
+      "lcb": -0.3291974974529883,
+      "ref": 1.7129169081488047,
+      "tripwires": [
+        "baseline_ratio_too_high:eval_wall_clock_sec_ratio=2.6155>2.0"
+      ]
+    },
+    "t_learner_gbr_base": {
+      "cand": 1.5593996619509418,
+      "decision": "ROLLBACK",
+      "gain": 0.3154226816145589,
+      "lcb": -0.16135524796341683,
+      "ref": 1.8748223435655007,
+      "tripwires": [
+        "baseline_ratio_too_high:eval_wall_clock_sec_ratio=2.6155>2.0"
+      ]
+    }
+  },
+  "holdout_finalized": null,
+  "holdout_reserve": {
+    "artifact_sha_mismatches": [],
+    "candidate_id": "c2_cand_02_loo_mkl_tar_synthesis",
+    "missing_or_failed_comparators": [
+      "t_learner_gbr_base:ROLLBACK",
+      "dr_learner_base:ROLLBACK",
+      "equal_compute_t_ens:ROLLBACK"
+    ],
+    "status": "BLOCKED_NOT_CONFIRMED"
+  },
+  "ledger_verification": {
+    "entries": 5,
+    "head_sha256": "d47e4ad19b05cc19f1ebd74a3cc785b1f8d3b4c450c290d04836228e66627b8b",
+    "status": "VERIFIED"
+  },
+  "search_scores": {
+    "c2_cand_01_kernel_x_learner": {
+      "eval_wall_clock_sec": 20.970020010136068,
+      "sqrt_pehe": 1.6995072889185376
+    },
+    "c2_cand_02_loo_mkl_tar_synthesis": {
+      "eval_wall_clock_sec": 39.9277204060927,
+      "sqrt_pehe": 1.5554588734525094
+    }
+  }
+}
