@@ -1,0 +1,254 @@
+{
+  "autosota_audit": {
+    "autosota_id": "d4_autosota_rstib_ns50_zeroib",
+    "autosota_metrics": {
+      "eval_wall_clock_sec": 21.53791225887835,
+      "traffic_mae": 66.04530763626099
+    },
+    "baseline_metrics": {
+      "eval_wall_clock_sec": 12.775104937143624,
+      "traffic_mae": 66.3426661491394
+    },
+    "decision": "PROVISIONAL_KEEP",
+    "tripwires": []
+  },
+  "baseline_search": {
+    "eval_wall_clock_sec": 12.775104937143624,
+    "traffic_mae": 66.3426661491394
+  },
+  "benchmark": "d4",
+  "confirm_verdicts": {
+    "d4_base_huber_ridge": {
+      "cand": 30.850528120994568,
+      "decision": "PROMOTE",
+      "gain": 36.48402750492096,
+      "lcb": 34.33302688598633,
+      "ref": 67.33455562591553,
+      "signflip_method": "exact",
+      "signflip_p": 1.52587890625e-05,
+      "tripwires": []
+    },
+    "d4_comp_spatial_mlp": {
+      "cand": 30.850528120994568,
+      "decision": "PROMOTE",
+      "gain": 8.648066520690918,
+      "lcb": 6.703390002250671,
+      "ref": 39.498594641685486,
+      "signflip_method": "exact",
+      "signflip_p": 1.52587890625e-05,
+      "tripwires": []
+    },
+    "d4_paper_rstib_ns12": {
+      "cand": 30.850528120994568,
+      "decision": "PROMOTE",
+      "gain": 33.37895405292511,
+      "lcb": 31.567856073379517,
+      "ref": 64.22948217391968,
+      "signflip_method": "exact",
+      "signflip_p": 1.52587890625e-05,
+      "tripwires": []
+    }
+  },
+  "holdout_finalized": {
+    "comparisons": {
+      "d4_base_huber_ridge": {
+        "bootstrap_mode": "cluster_1d",
+        "ci95_high": 39.96041285991669,
+        "ci95_low": 33.026989817619324,
+        "distinct_cluster_deltas": 16,
+        "insufficient_replication": false,
+        "lcb_one_sided": 33.026989817619324,
+        "low_cluster_warning": false,
+        "n_clusters": 16,
+        "n_items": 16,
+        "n_positive_clusters": 16,
+        "n_seeds": 0,
+        "n_strata": 1,
+        "obs_candidate": 31.550897240638733,
+        "obs_reference": 67.96828269958496,
+        "se": 1.7576558716317192,
+        "signed_gain": 36.41738545894623,
+        "signflip_method": "exact",
+        "signflip_p_one_sided": 1.52587890625e-05,
+        "statistic": "mean",
+        "weighting": "equal_item"
+      },
+      "d4_comp_spatial_mlp": {
+        "bootstrap_mode": "cluster_1d",
+        "ci95_high": 11.404169082641602,
+        "ci95_low": 8.423796892166138,
+        "distinct_cluster_deltas": 16,
+        "insufficient_replication": false,
+        "lcb_one_sided": 8.423796892166138,
+        "low_cluster_warning": false,
+        "n_clusters": 16,
+        "n_items": 16,
+        "n_positive_clusters": 16,
+        "n_seeds": 0,
+        "n_strata": 1,
+        "obs_candidate": 31.550897240638733,
+        "obs_reference": 41.339430809020996,
+        "se": 0.7663807574295131,
+        "signed_gain": 9.788533568382263,
+        "signflip_method": "exact",
+        "signflip_p_one_sided": 1.52587890625e-05,
+        "statistic": "mean",
+        "weighting": "equal_item"
+      },
+      "d4_paper_rstib_ns12": {
+        "bootstrap_mode": "cluster_1d",
+        "ci95_high": 39.430126428604126,
+        "ci95_low": 31.47814655303955,
+        "distinct_cluster_deltas": 16,
+        "insufficient_replication": false,
+        "lcb_one_sided": 31.47814655303955,
+        "low_cluster_warning": false,
+        "n_clusters": 16,
+        "n_items": 16,
+        "n_positive_clusters": 16,
+        "n_seeds": 0,
+        "n_strata": 1,
+        "obs_candidate": 31.550897240638733,
+        "obs_reference": 66.99290537834167,
+        "se": 2.041360915347244,
+        "signed_gain": 35.44200813770294,
+        "signflip_method": "exact",
+        "signflip_p_one_sided": 1.52587890625e-05,
+        "statistic": "mean",
+        "weighting": "equal_item"
+      }
+    },
+    "holdout_guardrails_passed": true,
+    "holdout_seal_sha256": "6a8bb07a36b81833190421048db366f4d7132f748f0300b228000a2088dc5ffe",
+    "holdout_tripwires": [],
+    "ledger_entry_sha256": "afece121c9434773cc09a82a6db3ed20e90b1a9495a07d06893869493ef15102",
+    "seal_file": "/scratch/autosota_governed_v4/seals/HOLDOUT_SEAL_d4.json",
+    "status": "FINALIZED"
+  },
+  "holdout_reserve": {
+    "candidate_artifact_sha256": "c48d3ef72d82d1a18121b074963268a7d328dfb79d5d55b6bf29038872f32592",
+    "candidate_id": "d4_r2_crossover_kriging_spectral_factor",
+    "ledger_head_at_reserve_sha256": "71cabdc8e344b0190dfa35d395c4d1a7ba2ea44c9d678f2bd3015e03d8895b0c",
+    "manifest_root_sha256": "e332e4df715a36cb6925e9172229cad12fb962627ddc8ae22da36d83c982eec0",
+    "required_comparators_verified": [
+      "d4_paper_rstib_ns12",
+      "d4_base_huber_ridge",
+      "d4_comp_spatial_mlp"
+    ],
+    "reserved_at_utc": "2026-11-18T12:07:21.978636+00:00",
+    "rules_sha256": "3cb25d55a3b59a78ca2d597585a344baab9021cc6048e4b6e85f12e4141cf896",
+    "schema_version": "3.0",
+    "seal_file": "/scratch/autosota_governed_v4/seals/HOLDOUT_SEAL_d4.json",
+    "status": "RESERVED"
+  },
+  "ledger_verification": {
+    "entries": 10,
+    "head_sha256": "afece121c9434773cc09a82a6db3ed20e90b1a9495a07d06893869493ef15102",
+    "status": "VERIFIED"
+  },
+  "manifest_root_sha256": "e332e4df715a36cb6925e9172229cad12fb962627ddc8ae22da36d83c982eec0",
+  "round1_leaderboard": {
+    "d4_r1_coord_kriging_resnet": {
+      "decision_vs_running_incumbent": "PROVISIONAL_KEEP",
+      "metrics": {
+        "eval_wall_clock_sec": 16.035749117843807,
+        "traffic_mae": 39.2868857383728
+      },
+      "proposer_agent": "Proposer_A_Coordinator_Math",
+      "redacted_feedback": {
+        "candidate_id": "d4_r1_coord_kriging_resnet",
+        "comparator_id": "d4_paper_rstib_ns12",
+        "consecutive_rollbacks": 0,
+        "decision": "PROVISIONAL_KEEP",
+        "decision_stage": "search",
+        "halt_recommended": false,
+        "trial_id": "d4_r1_01_d4_r1_coord_kriging_resnet",
+        "tripwires": []
+      },
+      "tripwires": []
+    },
+    "d4_r1_decision_mad_top8": {
+      "decision_vs_running_incumbent": "ROLLBACK",
+      "metrics": {
+        "eval_wall_clock_sec": 11.60354646621272,
+        "traffic_mae": 50.289408683776855
+      },
+      "proposer_agent": "Proposer_D_Decision_Theory",
+      "redacted_feedback": {
+        "candidate_id": "d4_r1_decision_mad_top8",
+        "comparator_id": "d4_r1_coord_kriging_resnet",
+        "consecutive_rollbacks": 3,
+        "decision": "ROLLBACK",
+        "decision_stage": "search",
+        "halt_recommended": false,
+        "trial_id": "d4_r1_04_d4_r1_decision_mad_top8",
+        "tripwires": []
+      },
+      "tripwires": []
+    },
+    "d4_r1_explore_diffusion_ar": {
+      "decision_vs_running_incumbent": "ROLLBACK",
+      "metrics": {
+        "eval_wall_clock_sec": 23.383660596096888,
+        "traffic_mae": 41.823989391326904
+      },
+      "proposer_agent": "Proposer_B_Fast_Explorer",
+      "redacted_feedback": {
+        "candidate_id": "d4_r1_explore_diffusion_ar",
+        "comparator_id": "d4_r1_coord_kriging_resnet",
+        "consecutive_rollbacks": 1,
+        "decision": "ROLLBACK",
+        "decision_stage": "search",
+        "halt_recommended": false,
+        "trial_id": "d4_r1_02_d4_r1_explore_diffusion_ar",
+        "tripwires": [
+          "baseline_ratio_too_high:eval_wall_clock_sec_ratio=1.8304>1.8"
+        ]
+      },
+      "tripwires": [
+        "baseline_ratio_too_high:eval_wall_clock_sec_ratio=1.8304>1.8"
+      ]
+    },
+    "d4_r1_spectral_laplacian_huber": {
+      "decision_vs_running_incumbent": "ROLLBACK",
+      "metrics": {
+        "eval_wall_clock_sec": 17.836890344973654,
+        "traffic_mae": 43.96613907814026
+      },
+      "proposer_agent": "Proposer_C_Convex_Spectral",
+      "redacted_feedback": {
+        "candidate_id": "d4_r1_spectral_laplacian_huber",
+        "comparator_id": "d4_r1_coord_kriging_resnet",
+        "consecutive_rollbacks": 2,
+        "decision": "ROLLBACK",
+        "decision_stage": "search",
+        "halt_recommended": false,
+        "trial_id": "d4_r1_03_d4_r1_spectral_laplacian_huber",
+        "tripwires": []
+      },
+      "tripwires": []
+    }
+  },
+  "round2_leaderboard": {
+    "d4_r2_critic_fast_kriging_ms": {
+      "decision_vs_running_incumbent": "PROVISIONAL_KEEP",
+      "metrics": {
+        "eval_wall_clock_sec": 15.05228570010513,
+        "traffic_mae": 33.627296686172485
+      },
+      "proposer_agent": "Round2_Critic_Iterative",
+      "tripwires": []
+    },
+    "d4_r2_crossover_kriging_spectral_factor": {
+      "decision_vs_running_incumbent": "PROVISIONAL_KEEP",
+      "metrics": {
+        "eval_wall_clock_sec": 18.324250926962122,
+        "traffic_mae": 31.071576356887817
+      },
+      "proposer_agent": "Round2_Explorer_Crossover",
+      "tripwires": []
+    }
+  },
+  "selected_finalist": "d4_r2_crossover_kriging_spectral_factor",
+  "selected_finalist_proposer": "Round2_Explorer_Crossover"
+}

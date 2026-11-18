@@ -1,0 +1,124 @@
+{
+  "autosota_audit": {
+    "autosota_id": "d1_autosota_ensemble10_cheat",
+    "autosota_metrics": {
+      "eval_wall_clock_sec": 0.5684503430966288,
+      "ksii_mse": 0.011199409900494142,
+      "max_coalition_evals": 758.0,
+      "precision_at_10": 0.7625000000000001
+    },
+    "baseline_metrics": {
+      "eval_wall_clock_sec": 0.3130815571639687,
+      "ksii_mse": 1.756375949725594,
+      "max_coalition_evals": 200.0,
+      "precision_at_10": 0.2875
+    },
+    "decision": "ROLLBACK",
+    "tripwires": [
+      "hard_ceiling_failed:max_coalition_evals=758.0>200.0",
+      "per_stratum_ceiling_failed:adult.coalition_evals=722.500000>200.0",
+      "per_stratum_ceiling_failed:bike.coalition_evals=731.500000>200.0",
+      "per_stratum_ceiling_failed:california.coalition_evals=726.000000>200.0",
+      "per_stratum_ceiling_failed:soum.coalition_evals=735.500000>200.0"
+    ]
+  },
+  "baseline_search": {
+    "eval_wall_clock_sec": 0.3130815571639687,
+    "ksii_mse": 1.756375949725594,
+    "max_coalition_evals": 200.0,
+    "precision_at_10": 0.2875
+  },
+  "bench_id": "d1",
+  "manifest_root_sha256": "31b16323f6bf3de8297facbd25f357af888dcbf0701771e57b147ba6e3521192",
+  "round1_incumbent_id": "d1_r1_coord_wls_shapley",
+  "round1_leaderboard": {
+    "d1_r1_coord_wls_shapley": {
+      "decision_vs_running_incumbent": "PROVISIONAL_KEEP",
+      "metrics": {
+        "eval_wall_clock_sec": 0.29521354706957936,
+        "ksii_mse": 0.001608108301583041,
+        "max_coalition_evals": 200.0,
+        "precision_at_10": 0.90625
+      },
+      "proposer_agent": "Proposer_A_Coordinator_Math",
+      "redacted_feedback": {
+        "candidate_id": "d1_r1_coord_wls_shapley",
+        "comparator_id": "d1_base_mc_antithetic_200",
+        "consecutive_rollbacks": 0,
+        "decision": "PROVISIONAL_KEEP",
+        "decision_stage": "search",
+        "halt_recommended": false,
+        "trial_id": "d1_r1_01_d1_r1_coord_wls_shapley",
+        "tripwires": []
+      },
+      "tripwires": []
+    },
+    "d1_r1_decision_eb_ht": {
+      "decision_vs_running_incumbent": "ROLLBACK",
+      "metrics": {
+        "eval_wall_clock_sec": 0.32997892377898097,
+        "ksii_mse": 0.08986868820637205,
+        "max_coalition_evals": 200.0,
+        "precision_at_10": 0.40625
+      },
+      "proposer_agent": "Proposer_D_Decision_Theory",
+      "redacted_feedback": {
+        "candidate_id": "d1_r1_decision_eb_ht",
+        "comparator_id": "d1_r1_coord_wls_shapley",
+        "consecutive_rollbacks": 3,
+        "decision": "ROLLBACK",
+        "decision_stage": "search",
+        "halt_recommended": false,
+        "trial_id": "d1_r1_04_d1_r1_decision_eb_ht",
+        "tripwires": []
+      },
+      "tripwires": []
+    },
+    "d1_r1_explore_active2batch": {
+      "decision_vs_running_incumbent": "ROLLBACK",
+      "metrics": {
+        "eval_wall_clock_sec": 0.5487149658147246,
+        "ksii_mse": 0.0018748217974945737,
+        "max_coalition_evals": 200.0,
+        "precision_at_10": 0.9125
+      },
+      "proposer_agent": "Proposer_B_Fast_Explorer",
+      "redacted_feedback": {
+        "candidate_id": "d1_r1_explore_active2batch",
+        "comparator_id": "d1_r1_coord_wls_shapley",
+        "consecutive_rollbacks": 1,
+        "decision": "ROLLBACK",
+        "decision_stage": "search",
+        "halt_recommended": false,
+        "trial_id": "d1_r1_02_d1_r1_explore_active2batch",
+        "tripwires": []
+      },
+      "tripwires": []
+    },
+    "d1_r1_spectral_doptimal": {
+      "decision_vs_running_incumbent": "ROLLBACK",
+      "metrics": {
+        "eval_wall_clock_sec": 0.7853221339173615,
+        "ksii_mse": 0.0014163950849391434,
+        "max_coalition_evals": 200.0,
+        "precision_at_10": 0.90625
+      },
+      "proposer_agent": "Proposer_C_Convex_Spectral",
+      "redacted_feedback": {
+        "candidate_id": "d1_r1_spectral_doptimal",
+        "comparator_id": "d1_r1_coord_wls_shapley",
+        "consecutive_rollbacks": 2,
+        "decision": "ROLLBACK",
+        "decision_stage": "search",
+        "halt_recommended": false,
+        "trial_id": "d1_r1_03_d1_r1_spectral_doptimal",
+        "tripwires": [
+          "baseline_ratio_too_high:eval_wall_clock_sec_ratio=2.5084>2.5"
+        ]
+      },
+      "tripwires": [
+        "baseline_ratio_too_high:eval_wall_clock_sec_ratio=2.5084>2.5"
+      ]
+    }
+  }
+}

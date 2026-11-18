@@ -1,0 +1,120 @@
+{
+  "autosota_audit": {
+    "autosota_id": "d6_autosota_olla_2000steps_cheat",
+    "autosota_metrics": {
+      "eval_wall_clock_sec": 164.70097490190528,
+      "max_grad_calls": 1600.0,
+      "max_manifold_err": 4.81084239112306e-08,
+      "sliced_w1_dist": 0.05846335614784828
+    },
+    "baseline_metrics": {
+      "eval_wall_clock_sec": 41.25463182106614,
+      "max_grad_calls": 400.0,
+      "max_manifold_err": 4.13230454299196e-08,
+      "sliced_w1_dist": 0.06246865794824453
+    },
+    "decision": "ROLLBACK",
+    "tripwires": [
+      "hard_ceiling_failed:max_grad_calls=1600.0>400.0",
+      "per_stratum_ceiling_failed:fair_bayes_logit.grad_calls=1600.000000>400.0",
+      "per_stratum_ceiling_failed:sphere_mog.grad_calls=1600.000000>400.0",
+      "per_stratum_ceiling_failed:stiefel_2frame.grad_calls=1600.000000>400.0",
+      "baseline_ratio_too_high:eval_wall_clock_sec_ratio=3.9923>2.2"
+    ]
+  },
+  "baseline_search": {
+    "eval_wall_clock_sec": 41.25463182106614,
+    "max_grad_calls": 400.0,
+    "max_manifold_err": 4.13230454299196e-08,
+    "sliced_w1_dist": 0.06246865794824453
+  },
+  "bench_id": "d6",
+  "manifest_root_sha256": "afaec4d8384363ff52beeb1ca9e004870921131bed65c10da62e3aa712701311",
+  "round1_incumbent_id": "d6_paper_olla_400",
+  "round1_leaderboard": {
+    "d6_r1_coord_stein_landing": {
+      "decision_vs_running_incumbent": "ROLLBACK",
+      "metrics": {
+        "eval_wall_clock_sec": 57.48049652087502,
+        "max_grad_calls": 400.0,
+        "max_manifold_err": 5.079727749546237e-08,
+        "sliced_w1_dist": 0.06962023295580726
+      },
+      "proposer_agent": "Proposer_A_Coordinator_Math",
+      "redacted_feedback": {
+        "candidate_id": "d6_r1_coord_stein_landing",
+        "comparator_id": "d6_paper_olla_400",
+        "consecutive_rollbacks": 1,
+        "decision": "ROLLBACK",
+        "decision_stage": "search",
+        "halt_recommended": false,
+        "trial_id": "d6_r1_01_d6_r1_coord_stein_landing",
+        "tripwires": []
+      },
+      "tripwires": []
+    },
+    "d6_r1_decision_metro_rattle": {
+      "decision_vs_running_incumbent": "ROLLBACK",
+      "metrics": {
+        "eval_wall_clock_sec": 19.719316753093153,
+        "max_grad_calls": 400.0,
+        "max_manifold_err": 5.088766652505683e-08,
+        "sliced_w1_dist": 0.2051359670373286
+      },
+      "proposer_agent": "Proposer_D_Decision_Theory",
+      "redacted_feedback": {
+        "candidate_id": "d6_r1_decision_metro_rattle",
+        "comparator_id": "d6_paper_olla_400",
+        "consecutive_rollbacks": 4,
+        "decision": "ROLLBACK",
+        "decision_stage": "search",
+        "halt_recommended": false,
+        "trial_id": "d6_r1_04_d6_r1_decision_metro_rattle",
+        "tripwires": []
+      },
+      "tripwires": []
+    },
+    "d6_r1_explore_sw_transport": {
+      "decision_vs_running_incumbent": "ROLLBACK",
+      "metrics": {
+        "eval_wall_clock_sec": 43.10103826317936,
+        "max_grad_calls": 400.0,
+        "max_manifold_err": 4.1562357999680444e-08,
+        "sliced_w1_dist": 0.06198443334101092
+      },
+      "proposer_agent": "Proposer_B_Fast_Explorer",
+      "redacted_feedback": {
+        "candidate_id": "d6_r1_explore_sw_transport",
+        "comparator_id": "d6_paper_olla_400",
+        "consecutive_rollbacks": 2,
+        "decision": "ROLLBACK",
+        "decision_stage": "search",
+        "halt_recommended": false,
+        "trial_id": "d6_r1_02_d6_r1_explore_sw_transport",
+        "tripwires": []
+      },
+      "tripwires": []
+    },
+    "d6_r1_spectral_metric_langevin": {
+      "decision_vs_running_incumbent": "ROLLBACK",
+      "metrics": {
+        "eval_wall_clock_sec": 72.53799285297282,
+        "max_grad_calls": 400.0,
+        "max_manifold_err": 5.1844557091840215e-08,
+        "sliced_w1_dist": 0.06376041388404553
+      },
+      "proposer_agent": "Proposer_C_Convex_Spectral",
+      "redacted_feedback": {
+        "candidate_id": "d6_r1_spectral_metric_langevin",
+        "comparator_id": "d6_paper_olla_400",
+        "consecutive_rollbacks": 3,
+        "decision": "ROLLBACK",
+        "decision_stage": "search",
+        "halt_recommended": false,
+        "trial_id": "d6_r1_03_d6_r1_spectral_metric_langevin",
+        "tripwires": []
+      },
+      "tripwires": []
+    }
+  }
+}

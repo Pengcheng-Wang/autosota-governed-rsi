@@ -1,0 +1,148 @@
+{
+  "autosota_audit": {
+    "autosota_id": "d9_autosota_pinet_dr10_infeasible",
+    "autosota_metrics": {
+      "eval_wall_clock_sec": 0.17925536600523628,
+      "max_feasibility_err": 0.0011018962596935356,
+      "opt_rmse": 0.3040198033716841
+    },
+    "baseline_metrics": {
+      "eval_wall_clock_sec": 0.20428177999565378,
+      "max_feasibility_err": 7.549516567451064e-15,
+      "opt_rmse": 0.30401980335351275
+    },
+    "decision": "ROLLBACK",
+    "tripwires": [
+      "hard_ceiling_failed:max_feasibility_err=0.0011018962596935356>0.0001",
+      "per_stratum_ceiling_failed:high_coupled.feasibility_err=0.000301>0.0001"
+    ]
+  },
+  "baseline_search": {
+    "eval_wall_clock_sec": 0.20428177999565378,
+    "max_feasibility_err": 7.549516567451064e-15,
+    "opt_rmse": 0.30401980335351275
+  },
+  "bench_id": "d9",
+  "manifest_root_sha256": "b65c56600556f6cd3c6f0224ddc67fe9614e98efec484db017b61fb34fc8ee40",
+  "round1_incumbent_id": "d9_paper_pinet_dr50",
+  "round1_leaderboard": {
+    "d9_r1_coord_fista_ssn": {
+      "decision_vs_running_incumbent": "ROLLBACK",
+      "metrics": {
+        "eval_wall_clock_sec": 1.3685692450089846,
+        "max_feasibility_err": 0.0019791966079860668,
+        "opt_rmse": 3.597986801117179e-05
+      },
+      "proposer_agent": "Proposer_A_Coordinator_Math",
+      "redacted_feedback": {
+        "candidate_id": "d9_r1_coord_fista_ssn",
+        "comparator_id": "d9_paper_pinet_dr50",
+        "consecutive_rollbacks": 1,
+        "decision": "ROLLBACK",
+        "decision_stage": "search",
+        "halt_recommended": false,
+        "trial_id": "d9_r1_01_d9_r1_coord_fista_ssn",
+        "tripwires": [
+          "hard_ceiling_failed:max_feasibility_err=0.0019791966079860668>0.0001",
+          "per_stratum_ceiling_failed:high_coupled.feasibility_err=0.000673>0.0001",
+          "per_stratum_ceiling_failed:ill_cond.feasibility_err=0.001206>0.0001",
+          "per_stratum_ceiling_failed:tight_box.feasibility_err=0.000190>0.0001",
+          "per_stratum_ceiling_failed:well_cond.feasibility_err=0.000241>0.0001",
+          "baseline_ratio_too_high:eval_wall_clock_sec_ratio=6.6994>1.25"
+        ]
+      },
+      "tripwires": [
+        "hard_ceiling_failed:max_feasibility_err=0.0019791966079860668>0.0001",
+        "per_stratum_ceiling_failed:high_coupled.feasibility_err=0.000673>0.0001",
+        "per_stratum_ceiling_failed:ill_cond.feasibility_err=0.001206>0.0001",
+        "per_stratum_ceiling_failed:tight_box.feasibility_err=0.000190>0.0001",
+        "per_stratum_ceiling_failed:well_cond.feasibility_err=0.000241>0.0001",
+        "baseline_ratio_too_high:eval_wall_clock_sec_ratio=6.6994>1.25"
+      ]
+    },
+    "d9_r1_decision_dual_ssn": {
+      "decision_vs_running_incumbent": "ROLLBACK",
+      "metrics": {
+        "eval_wall_clock_sec": 0.3741759689874016,
+        "max_feasibility_err": 5.361932160565601,
+        "opt_rmse": 0.011624012084781919
+      },
+      "proposer_agent": "Proposer_D_Decision_Theory",
+      "redacted_feedback": {
+        "candidate_id": "d9_r1_decision_dual_ssn",
+        "comparator_id": "d9_paper_pinet_dr50",
+        "consecutive_rollbacks": 4,
+        "decision": "ROLLBACK",
+        "decision_stage": "search",
+        "halt_recommended": false,
+        "trial_id": "d9_r1_04_d9_r1_decision_dual_ssn",
+        "tripwires": [
+          "hard_ceiling_failed:max_feasibility_err=5.361932160565601>0.0001",
+          "per_stratum_ceiling_failed:high_coupled.feasibility_err=1.340483>0.0001",
+          "baseline_ratio_too_high:eval_wall_clock_sec_ratio=1.8317>1.25"
+        ]
+      },
+      "tripwires": [
+        "hard_ceiling_failed:max_feasibility_err=5.361932160565601>0.0001",
+        "per_stratum_ceiling_failed:high_coupled.feasibility_err=1.340483>0.0001",
+        "baseline_ratio_too_high:eval_wall_clock_sec_ratio=1.8317>1.25"
+      ]
+    },
+    "d9_r1_explore_primal_kkt": {
+      "decision_vs_running_incumbent": "ROLLBACK",
+      "metrics": {
+        "eval_wall_clock_sec": 1.3853350499994121,
+        "max_feasibility_err": 0.00271276424887823,
+        "opt_rmse": 4.0413888543345815e-05
+      },
+      "proposer_agent": "Proposer_B_Fast_Explorer",
+      "redacted_feedback": {
+        "candidate_id": "d9_r1_explore_primal_kkt",
+        "comparator_id": "d9_paper_pinet_dr50",
+        "consecutive_rollbacks": 2,
+        "decision": "ROLLBACK",
+        "decision_stage": "search",
+        "halt_recommended": false,
+        "trial_id": "d9_r1_02_d9_r1_explore_primal_kkt",
+        "tripwires": [
+          "hard_ceiling_failed:max_feasibility_err=0.00271276424887823>0.0001",
+          "per_stratum_ceiling_failed:high_coupled.feasibility_err=0.001245>0.0001",
+          "per_stratum_ceiling_failed:ill_cond.feasibility_err=0.001064>0.0001",
+          "per_stratum_ceiling_failed:tight_box.feasibility_err=0.000316>0.0001",
+          "baseline_ratio_too_high:eval_wall_clock_sec_ratio=6.7815>1.25"
+        ]
+      },
+      "tripwires": [
+        "hard_ceiling_failed:max_feasibility_err=0.00271276424887823>0.0001",
+        "per_stratum_ceiling_failed:high_coupled.feasibility_err=0.001245>0.0001",
+        "per_stratum_ceiling_failed:ill_cond.feasibility_err=0.001064>0.0001",
+        "per_stratum_ceiling_failed:tight_box.feasibility_err=0.000316>0.0001",
+        "baseline_ratio_too_high:eval_wall_clock_sec_ratio=6.7815>1.25"
+      ]
+    },
+    "d9_r1_spectral_anderson_dr": {
+      "decision_vs_running_incumbent": "ROLLBACK",
+      "metrics": {
+        "eval_wall_clock_sec": 0.2782304840220604,
+        "max_feasibility_err": 6.661338147750939e-15,
+        "opt_rmse": 0.5312453557630138
+      },
+      "proposer_agent": "Proposer_C_Convex_Spectral",
+      "redacted_feedback": {
+        "candidate_id": "d9_r1_spectral_anderson_dr",
+        "comparator_id": "d9_paper_pinet_dr50",
+        "consecutive_rollbacks": 3,
+        "decision": "ROLLBACK",
+        "decision_stage": "search",
+        "halt_recommended": false,
+        "trial_id": "d9_r1_03_d9_r1_spectral_anderson_dr",
+        "tripwires": [
+          "baseline_ratio_too_high:eval_wall_clock_sec_ratio=1.3620>1.25"
+        ]
+      },
+      "tripwires": [
+        "baseline_ratio_too_high:eval_wall_clock_sec_ratio=1.3620>1.25"
+      ]
+    }
+  }
+}

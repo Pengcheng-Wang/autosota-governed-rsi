@@ -1,0 +1,100 @@
+{
+  "autosota_audit": {
+    "autosota_id": "d7_autosota_rlsa_leap",
+    "autosota_metrics": {
+      "eval_wall_clock_sec": 1.7214064479921944,
+      "maxcut_value": 487.8536684375
+    },
+    "baseline_metrics": {
+      "eval_wall_clock_sec": 1.6785807690175716,
+      "maxcut_value": 486.9575575
+    },
+    "decision": "PROVISIONAL_KEEP",
+    "tripwires": []
+  },
+  "baseline_search": {
+    "eval_wall_clock_sec": 1.6785807690175716,
+    "maxcut_value": 486.9575575
+  },
+  "bench_id": "d7",
+  "manifest_root_sha256": "7aca70a7bb80e4be6cf29a1bcb4315146d0159f0b4a1af0f8c449888d2e73a30",
+  "round1_incumbent_id": "d7_r1_spectral_sim_bifurcation",
+  "round1_leaderboard": {
+    "d7_r1_coord_bm_sdp_ils": {
+      "decision_vs_running_incumbent": "PROVISIONAL_KEEP",
+      "metrics": {
+        "eval_wall_clock_sec": 0.5511442269780673,
+        "maxcut_value": 496.7789959375
+      },
+      "proposer_agent": "Proposer_A_Coordinator_Math",
+      "redacted_feedback": {
+        "candidate_id": "d7_r1_coord_bm_sdp_ils",
+        "comparator_id": "d7_paper_rlsa_langevin",
+        "consecutive_rollbacks": 0,
+        "decision": "PROVISIONAL_KEEP",
+        "decision_stage": "search",
+        "halt_recommended": false,
+        "trial_id": "d7_r1_01_d7_r1_coord_bm_sdp_ils",
+        "tripwires": []
+      },
+      "tripwires": []
+    },
+    "d7_r1_decision_inc_sa": {
+      "decision_vs_running_incumbent": "ROLLBACK",
+      "metrics": {
+        "eval_wall_clock_sec": 1.6658599689835683,
+        "maxcut_value": 494.89715375000003
+      },
+      "proposer_agent": "Proposer_D_Decision_Theory",
+      "redacted_feedback": {
+        "candidate_id": "d7_r1_decision_inc_sa",
+        "comparator_id": "d7_r1_spectral_sim_bifurcation",
+        "consecutive_rollbacks": 2,
+        "decision": "ROLLBACK",
+        "decision_stage": "search",
+        "halt_recommended": false,
+        "trial_id": "d7_r1_04_d7_r1_decision_inc_sa",
+        "tripwires": []
+      },
+      "tripwires": []
+    },
+    "d7_r1_explore_elite_crossover": {
+      "decision_vs_running_incumbent": "ROLLBACK",
+      "metrics": {
+        "eval_wall_clock_sec": 0.602906134998193,
+        "maxcut_value": 494.5596234375
+      },
+      "proposer_agent": "Proposer_B_Fast_Explorer",
+      "redacted_feedback": {
+        "candidate_id": "d7_r1_explore_elite_crossover",
+        "comparator_id": "d7_r1_coord_bm_sdp_ils",
+        "consecutive_rollbacks": 1,
+        "decision": "ROLLBACK",
+        "decision_stage": "search",
+        "halt_recommended": false,
+        "trial_id": "d7_r1_02_d7_r1_explore_elite_crossover",
+        "tripwires": []
+      },
+      "tripwires": []
+    },
+    "d7_r1_spectral_sim_bifurcation": {
+      "decision_vs_running_incumbent": "PROVISIONAL_KEEP",
+      "metrics": {
+        "eval_wall_clock_sec": 0.8678600090206601,
+        "maxcut_value": 497.6215534375
+      },
+      "proposer_agent": "Proposer_C_Convex_Spectral",
+      "redacted_feedback": {
+        "candidate_id": "d7_r1_spectral_sim_bifurcation",
+        "comparator_id": "d7_r1_coord_bm_sdp_ils",
+        "consecutive_rollbacks": 0,
+        "decision": "PROVISIONAL_KEEP",
+        "decision_stage": "search",
+        "halt_recommended": false,
+        "trial_id": "d7_r1_03_d7_r1_spectral_sim_bifurcation",
+        "tripwires": []
+      },
+      "tripwires": []
+    }
+  }
+}
