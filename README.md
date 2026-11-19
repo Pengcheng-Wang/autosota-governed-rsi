@@ -1,6 +1,8 @@
 # Governed Loop Optimization (`RSI`) on `AutoSOTA`
 
-Systematic benchmark audit, protocol de-confounding, and governed Recursive Self-Improvement (`RSI`) across **`AutoSOTA`** using [`/governed-loop-optimization`](https://github.com/Pengcheng-Wang/ai-skills) (`scripts/governed_loop_guard.py` v3.6, `19/19` adversarial & statistical regression tests) and dual Frontier Cowork / `rubber-duck` peer review (`Opus 5.5, Max` & `GPT 6.2 Astra / GPT 6 Astra, Max`).
+Systematic benchmark audit, protocol de-confounding, and governed Recursive Self-Improvement (`RSI`) across **`AutoSOTA`** using bundled [`guard/`](./guard/) (`/governed-loop-optimization v3.7`, `guard/scripts/governed_loop_guard.py`, **`27 / 27` adversarial, statistical & isolation regression tests**) and dual Frontier Cowork / `rubber-duck` peer review (`Opus 5.5, Max` & `GPT 6.2 Astra / GPT 6 Astra, Max`).
+
+> **Companion Wave-5 Frontier `Cowork` Tournament Repository (`Opus 5.5, Max` + `GPT 6.2 Astra, Max` Multi-Round Crossover & Dual Milestone Audits):** [`Pengcheng-Wang/autosota-frontier-cowork-rsi`](https://github.com/Pengcheng-Wang/autosota-frontier-cowork-rsi)
 
 ---
 
@@ -9,13 +11,14 @@ Systematic benchmark audit, protocol de-confounding, and governed Recursive Self
 Every experiment attempted — **both confirmed single-touch Holdout wins AND unsuccessful, baseline-tied, Search-overfit, or governance-blocked runs** — is permanently logged in structured Markdown with its preregistered split contract, mandatory comparators, SHA-256 ledger/seal status, root-cause analysis, and RSI learning.
 
 - **Master Ledger of All Experiments:** [`EXPERIMENT_TRACKER.md`](./EXPERIMENT_TRACKER.md)
+- **Bundled Hardened Skill & Executable Guard (`v3.7`, `27/27` Tests):** [`guard/`](./guard/) (`SKILL.md`, `scripts/governed_loop_guard.py`, `tests/test_governed_loop_guard.py`, `references/domain-playbooks.md`, `assets/program_template.md`)
 - **Confirmed & Sealed-Holdout Wins (`12`):** [`experiments/successful/`](./experiments/successful/)
 - **Unsuccessful, Baseline-Tied & Governance-Blocked Runs (`15` reports / `17` benchmarks, `0` Holdout looks consumed):** [`experiments/unsuccessful/`](./experiments/unsuccessful/)
 - **Multi-Agent Iterative Proposer Study (`Wave 4: D1–D9`):** [`docs/MULTI_AGENT_PROPOSER_RSI_STUDY.md`](./docs/MULTI_AGENT_PROPOSER_RSI_STUDY.md)
 - **Complete `105 / 105` `AutoSOTA` Benchmark Paper Master Audit:** [`triage/ALL_105_IMPROVED_PAPERS_COMPLETE_AUDIT.md`](./triage/ALL_105_IMPROVED_PAPERS_COMPLETE_AUDIT.md)
-- **Iterative Meta-RSI Evolution (`v2.0 -> v3.6`):** [`docs/META_RSI_SKILL_EVOLUTION.md`](./docs/META_RSI_SKILL_EVOLUTION.md)
+- **Iterative Meta-RSI Evolution (`v2.0 -> v3.7`):** [`docs/META_RSI_SKILL_EVOLUTION.md`](./docs/META_RSI_SKILL_EVOLUTION.md)
 - **612-Repo Static Gate-1 Triage Audit:** [`triage/AUTOSOTA_612_TRIAGE_REPORT.md`](./triage/AUTOSOTA_612_TRIAGE_REPORT.md)
-- **Frontier Cowork Verbatim Audits:** [`reviews/`](./reviews/)
+- **Frontier Cowork Verbatim Audits (incl. `v3.7` Coding & ML Alignment):** [`reviews/`](./reviews/)
 
 ---
 
